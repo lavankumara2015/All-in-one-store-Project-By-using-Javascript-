@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String manipulation</title>
+</head>
+<body>
+
+<script>
+// let a="happy";
+
+// let b="";
+
+// for(i=0; i<a.length; i++){
+
+//    if(a[i]==="p"){
+
+//     b=b+"i";
+
+//    }else{
+//     b=b+a[i];
+//    }
+// }
+// console.log(b);
+
+
+//type conversation;
+
+// let a="lavankumar";
+// let b="";
+// let c= "1234"
+
+// c=Number();
+
+// console.log(typeof(a));
+
+// console.log(Boolean(a));
+// console.log(Boolean(b));
+
+// console.log(a.toString());
+// console.log(b.toString());
+
+// console.log(number(a));
+// console.log(number(b));
+
+// console.log(typeof(c));
+// console.log(Number(c));
+// console.log(typeof( Number(c)));
+
+// let a=[1,2,3,4,5];
+
+// let b=0;
+
+// for(i=0; i<a.length; i++){
+
+// b+=a[i]
+
+// }
+// console.log(b);
+
+
+// let a="lavan";
+
+// console.log(`value of a is ${12}`+"  "+ `value of b is ${18}`)
+
+
+// console.log(`a value ${10}`+`b value ${20}`+"   "+`${10+20}`);
+
+
+
+// let a=+prompt("enter station number");
+
+// let b=["k.p.h.b","kukatpally","balanagar","musapet","esi","erragada","ammerpet"];
+
+// for(i=0; i<b.length; i++){
+ 
+//    if(a==i){
+
+//     console.log(b[i])
+//    } 
+
+// }
+
+
+
+
+//_________________________String  Methods:______________________;
+
+
+
+
+// string length............................................
+
+// var a="lavankumar";
+
+// console.log(a.length);
+
+
+
+
+
+
+// string CharAt.............................................
+// console.log(a.charAt(5));
+// console.log(a.charCodeAt(0));
+
+
+
+
+
+
+
+//String Trim()..............................................
+
+//String TrimStart()..............................................
+
+//String TrimEnd()..............................................
+
+
+// var b="       lavan     adicherla          ";
+
+// console.log(b.trim());
+
+// console.log(b.trimStart());
+// console.log(b.trimEnd());
+
+
+
+
+
+
+
+//string concat();.................................................
+
+// var x="hello"
+
+// console.log(x.concat(" Lavan"));
+
+
+
+
+
+
+
+
+//string replace and replace all....................................
+
+// var a="adicherlAaaa";
+
+// console.log(a.replace("a","p"));
+
+// console.log(a.replaceAll("a","i"));
+
+// console.log(a.replace(/a/ig,"p"));
+
+
+
+
+
+
+
+
+//string padstart and padend..........................................
+
+// var a="5";
+
+// console.log(a.padStart(6,"w"));
+// console.log(a.padEnd(7,"f"));
+
+
+
+
+
+
+
+//string uppercase and lowercase;............................................
+
+// let ab="adichERLA";
+
+// console.log(ab.toUpperCase());
+// console.log(ab.toLowerCase());
+
+
+
+
+
+//string Split..................................................
+
+// let  aa=("lavankumara");
+
+// console.log(aa.split("a"));
+
+// the out given array only;
+
+
+
+
+
+//String slice()..................................................
+
+// let y="adicherlalavan";
+
+// console.log(y.slice(-6,-1));
+// console.log(y.slice(0,9));
+
+
+
+
+
+
+//string  substring().................................................
+
+// let y="adicherlalavan";
+
+// console.log(y.substring(1,6));
+
+// console.log(y.substr(0,9));
+
+
+
+//__________________________String search methods______________________________
+
+// index of and last index....................
+
+// let aba="karthik";
+
+// console.log(aba.indexOf("k"));
+// console.log(aba.lastIndexOf("i"));
+
+
+
+//string search.....................................................
+
+// var d="lavanadicherla";
+
+// console.log(d.search(/a/gi));
+
+
+
+
+//string  match and matchall........................................
+
+// var a="lavan";
+
+// console.log(a.match("l"));
+// console.log(a.match(/a/gi));
+
+
+
+
+
+
+//string Includes.....................................................
+
+// var a="adicherla";
+
+// console.log(a.includes("a"));   //it is given true and false
+
+
+
+
+//string    stars with and endswith...................................
+
+// var b="kakkerla";
+
+// console.log(b.startsWith("k"));
+
+// console.log(b.endsWith("a"));      //it is given true and false
+
+ 
+
+
+
+
+
+
+//1. take one input "Chaithanya" &remove "a" without predefined output will "Chithny"
+
+
+// var a="Lavankumar";
+// var b="";
+
+// for(i=0; i<a.length;i++){
+
+//     if(a[i]!=="a"){
+
+//         b=b+a[i];
+//     }
+
+// }
+// console.log(b);
+
+
+
+
+//2.take a prompt give one mail .if @gmail.com if it true print mail id other wise this in valid mail.
+
+// var a=prompt("lavankumara@gmail.com");
+
+// if (a.slice(-10)=="@gmail.com") {
+
+//     console.log("true");
+    
+// }else{
+//     console.log("flase");
+// }
+
+
+
+
+
+//3. take one propt give mobile num .check whether it is indian num or not
+
+
+// var a=prompt("enter number");
+
+
+// if ((a.slice(0,3)=="+91")&& (a.length==13)) {
+    
+//     console.log("it is indian number");
+// }else{
+//       console.log("it is not india number");
+// }
+
+
+
+// var a=prompt("enter num")
+// if((a.charAt("0")==9||a.charAt("0")==8||a.charAt("0")==7||a.charAt("0")==6) && (a.length==10) ){
+//     console.log("it is indian num");
+// }
+// else{
+//     console.log("it is  not indian num"); 
+// }
+
+
+
+// 4. take one string "hello g uys" remove spaces o/p will be "helloguys";
+
+// var a="hello  g  uys";
+// // console.log(a.replaceAll(" ",""));
+
+// var b="";
+
+// for(i=0; i<a.length; i++){
+
+   
+//   if( a[i] !==" "){
+
+//     b=b+a[i];
+//   }
+   
+
+// }
+// console.log(b);
+
+
+
+//5. take one string "helloguys" remove the even numbers print odd numbers.
+
+// var a="adicherla";
+// var b="";
+
+// for(i=0; i<a.length; i++){
+    
+//     if(i%2 !==0){
+      
+//         b=b+a[i]
+//     }
+// }
+// console.log(b)
+
+
+
+
+
+//6.take one string "1@3456@7879@4673".remove "@" in string print "1345678794674"
+
+//  var a="1@3456@7879@4673";
+
+//  b=a.split("@");
+
+// console.log(b);
+
+// b=[b[0]+b[1]+b[2]+b[3]]
+// console.log(b);
+
+
+// c=""
+// for(i=0;i<b.length;i++){
+//     c+=b[i]
+// }
+
+// console.log(c);
+
+
+
+
+// var b="";
+
+// for(i=0; i<a.length; i++){
+
+//     if (a[i]!=="@") {
+        
+//         b=b+a[i]
+//     }
+// }
+// console.log(b);
+
+
+
+// function name(a,b) {
+
+
+//  a.length==b.length ? console.log("true"):alert("false")
+//         }
+//         console.log(name("lavan","lavan"))
+
+
+
+
+</script>
+
+</body>
+</html>
