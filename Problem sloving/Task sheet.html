@@ -926,17 +926,31 @@
         // 			Output: 2 is missing
 
 
+     
 
-        // let a = [1,2,4,5];
+        // a=[1,3,4,5]
+        // b=[1,2,3,4,5]
+        // c=[]
+
+        // for(i=0;i<b.length;i++) {
+
+        //  if(b[i]!=a[0]&&b[i]!=a[1]&&b[i]!=a[2]&&b[i]!=a[3]){
+        //  c+=b[i]
+        // }
+
+        // }
+        //  console.log(c);
+
+
+
+
+        // let a=[1,3,4,5]
+
         // let b = [];
 
         // for (let i=1; i<=a.length; i++){
 
-        //     console.log(i);
-
         //   if(a.indexOf(i)==-1){
-
-        //     console.log(a.indexOf(i));
 
         //     b.push(i);
         //   }
@@ -961,6 +975,7 @@
         // console.log(x);
 
 
+
         //.......... <<  while loop >> ............//
 
         // let a = [1,2,4,5];
@@ -974,6 +989,7 @@
         // }
         // }
         // console.log(b);
+
 
 
         // for (let i=1; i<=a.length; i++){
@@ -1097,7 +1113,9 @@
 
 
 
-     //______________   Difficulty Level : Medium  ________________________
+     //_________________   Difficulty Level : Medium  ________________________
+
+
 
 // 1.   Write a function that converts an object into an array, where each element represents a key-value pair in the form of an array.
 
@@ -1114,6 +1132,270 @@
 
 
 
+// let a={a:1,b:2};
+
+
+// console.log(Object.entries(a));
+
+
+// let b={ shrimp: 15, tots: 12 };
+
+// console.log(Object.entries(b));
+
+// let c={};
+
+// console.log(Object.entries(c));
+
+
+
+
+// function lavan(a){
+
+//  let b=Object.entries(a);
+//     return b;
+// }
+// let x=lavan({a:1,b:2});
+// console.log(x);
+
+
+// function lava(a){
+//     let b=Object.entries(a)
+//     return b
+// }
+
+// let y=lava({ shrimp: 15, tots: 12 });
+// console.log(y);
+
+
+// function nam(a){
+
+//     let b=Object.entries(a)
+//     return b
+// }
+// let z=nam({});
+// console.log(z);
+
+
+
+
+
+
+
+//2.  Create a function that takes two numbers as arguments (num, length) and
+//    returns an array of multiples of num until the array length reaches length.
+//    Examples :
+//    
+//    arrayOfMultiples(12, 10) ➞ [12, 24, 36, 48, 60, 72, 84, 96, 108, 120]
+//    arrayOfMultiples(17, 6) ➞ [17, 34, 51, 68, 85, 102]
+
+
+
+
+// let a=7;
+
+// let b=5;    
+
+// let c=0;
+
+// let d=[];
+
+
+// for(i=0;i<b;i++){
+//     c+=a
+//     d.push(c)
+// }
+// console.log(d);
+
+
+
+
+// arrayOfMultiples(7, 5) ➞ [7, 14, 21, 28, 35]
+
+// function  lavan(a,b,c=0,d=[]) {
+
+//     for(i=0;i<b;i++){
+//         c+=a;
+//         d.push(c)
+//     }
+//    return  d
+// }
+// let x=lavan(7,5);
+// console.log(x);
+
+
+
+
+
+
+// arrayOfMultiples(12, 10) ➞ [12, 24, 36, 48, 60, 72, 84, 96, 108, 120];
+
+
+// function  lavan(a,b,c=0,d=[]) {
+
+//     for(i=0;i<b;i++){
+//         c+=a;
+//         d.push(c)
+//     }
+//    return  d
+// }
+// let x=lavan(12,10);
+// console.log(x);
+
+
+
+
+
+
+//    arrayOfMultiples(17, 6) ➞ [17, 34, 51, 68, 85, 102]
+
+
+// function namee(a,b,c=0,d=[]){
+
+//     for(i=0;i<b;i++){
+//         c+=a;
+//         d.push(c);
+//     }
+//     return d
+// }
+// let x=namee(17,6);
+// console.log(x);
+
+
+
+
+
+//  3.  Create the function that takes an array with objects and returns the sum of
+//    people&#39;s budgets.
+//    Examples :
+
+
+
+//    getBudgets([
+//   { name: John&quot, age: 21, budget: 23000 },
+//   { name: Steve&quot, age: 32, budget: 40000 },
+//   { name: Martin&quot, age: 16, budget: 2700 }
+//   ]) ➞ 65700
+
+//   getBudgets([
+//   { name: John&quot, age: 21, budget: 29000 },
+//   { name: Steve&quot, age: 32, budget: 32000 },
+//   { name: Martin&quot, age: 16, budget: 1600 }
+//   ]) ➞ 62600
+
+
+
+
+
+
+// let  a=[{name: "john&quot", age: 21, budget:23000},
+//                  { name: "Steve&quot", age: 32, budget: 40000 },
+//                  { name: "Martin&quot", age: 16, budget: 2700 }]
+
+
+// let b=0;
+
+// let aa=Object.values(a[0]);
+// let aaa=Object.values(a[1]);
+// let aaaa=Object.values(a[2]);
+
+//     if(aa[2]==aa[2] && aaa[2]==aaa[2] || aaaa[2]==aaaa[2] ){
+
+//         b+=aa[2]+aaa[2]+aaaa[2]
+//     }
+
+// console.log(b);
+
+
+
+
+
+
+
+// function  bb(a,b=0) {
+
+//     let aa=Object.values(a[0]);
+//     let aaa=Object.values(a[1]);
+//     let aaaa=Object.values(a[2]);
+
+//     if(aa[2]==aa[2] && aaa[2]==aaa[2] || aaaa[2]==aaaa[2] ){
+
+//     b+=aa[2]+aaa[2]+aaaa[2];
+
+//     }
+//     return b;
+// }
+
+
+
+
+
+// let x=bb([{name: "john&quot", age: 21, budget:23000},
+//                  { name: "Steve&quot", age: 32, budget: 40000 },
+//                  { name: "Martin&quot", age: 16, budget: 2700 }])
+
+// console.log(x);
+
+
+
+
+
+    //    let a=[{name: "John&quot", age: 21, budget: 29000 },
+    //           {name: "Steve&quot", age: 32, budget: 32000 },
+    //           {name: "Martin&quot", age: 16, budget: 1600 }];
+
+
+
+    //    let b=0;
+
+    //    let a1=Object.values(a[0]);
+    //    let a2=Object.values(a[1]);
+    //    let a3=Object.values(a[2]);
+
+
+    //    for(i=0;i<a.length;i++){
+    
+    //     if(a1[i]==a1[2] && a2[i]==a2[2] && a3[i]==a3[2]){
+
+    //         b+=a1[2]+a2[2]+a3[2]
+    //     }
+    //    }
+    //    console.log(b);
+ 
+
+
+
+
+
+// function lol(a,b=0){
+
+//     let a1=Object.values(a[0]);
+//        let a2=Object.values(a[1]);
+//        let a3=Object.values(a[2]);
+
+//         if(a1[2]==a1[2] && a2[2]==a2[2] && a3[2]==a3[2]){
+
+//             b+=a1[2]+a2[2]+a3[2]
+//         }
+    
+//     return b
+// }
+// let x=lol([{name: "John&quot", age: 21, budget: 29000 },
+//                {name: "Steve&quot", age: 32, budget: 32000 },
+//                {name: "Martin&quot", age: 16, budget: 1600 }]);
+
+//                console.log(x);
+
+
+
+
+
+// 4. Create a function that takes an array of objects like { name: John&quot, notes:
+// [3, 5, 4]} and returns an array of objects like { name: John&quot, avgNote: 4
+// }. If a student has no notes (an empty array) then let's assume avgNote: 0.
+
+// Example :
+// [{ name: John&quot, notes: [3, 5, 4]}
+// ] ➞ [{ name: John&quot, avgNote: 4 }]
 
 
 
