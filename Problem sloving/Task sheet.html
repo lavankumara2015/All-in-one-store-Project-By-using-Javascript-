@@ -1113,7 +1113,7 @@
 
 
 
-     //_________________   Difficulty Level : Medium  ________________________
+     //______________________   Difficulty Level : Medium  ________________________
 
 
 
@@ -1291,17 +1291,13 @@
 //                  { name: "Steve&quot", age: 32, budget: 40000 },
 //                  { name: "Martin&quot", age: 16, budget: 2700 }]
 
-
 // let b=0;
 
 // let aa=Object.values(a[0]);
 // let aaa=Object.values(a[1]);
 // let aaaa=Object.values(a[2]);
 
-//     if(aa[2]==aa[2] && aaa[2]==aaa[2] || aaaa[2]==aaaa[2] ){
-
 //         b+=aa[2]+aaa[2]+aaaa[2]
-//     }
 
 // console.log(b);
 
@@ -1317,17 +1313,11 @@
 //     let aaa=Object.values(a[1]);
 //     let aaaa=Object.values(a[2]);
 
-//     if(aa[2]==aa[2] && aaa[2]==aaa[2] || aaaa[2]==aaaa[2] ){
-
 //     b+=aa[2]+aaa[2]+aaaa[2];
 
-//     }
+    
 //     return b;
 // }
-
-
-
-
 
 // let x=bb([{name: "john&quot", age: 21, budget:23000},
 //                  { name: "Steve&quot", age: 32, budget: 40000 },
@@ -1344,21 +1334,14 @@
     //           {name: "Martin&quot", age: 16, budget: 1600 }];
 
 
-
     //    let b=0;
 
     //    let a1=Object.values(a[0]);
     //    let a2=Object.values(a[1]);
     //    let a3=Object.values(a[2]);
 
-
-    //    for(i=0;i<a.length;i++){
-    
-    //     if(a1[i]==a1[2] && a2[i]==a2[2] && a3[i]==a3[2]){
-
     //         b+=a1[2]+a2[2]+a3[2]
-    //     }
-    //    }
+
     //    console.log(b);
  
 
@@ -1372,11 +1355,7 @@
 //        let a2=Object.values(a[1]);
 //        let a3=Object.values(a[2]);
 
-//         if(a1[2]==a1[2] && a2[2]==a2[2] && a3[2]==a3[2]){
-
 //             b+=a1[2]+a2[2]+a3[2]
-//         }
-    
 //     return b
 // }
 // let x=lol([{name: "John&quot", age: 21, budget: 29000 },
@@ -1395,7 +1374,247 @@
 
 // Example :
 // [{ name: John&quot, notes: [3, 5, 4]}
-// ] ➞ [{ name: John&quot, avgNote: 4 }]
+// ] ➞ [{ name: John&quot, avgNote: 4 }];
+
+
+
+
+
+
+//.......Normal.....
+
+
+// let a=[{ name: "John&quot", notes: [3, 5, 4]}];
+
+// let b=3;
+
+// let aa=Object.values(a[0]);
+
+// let c=aa[1].reduce(function lavan(total,a,b,c){
+
+// return total+a
+
+// })
+// // console.log(d);
+
+// console.log(`[{ Name: John&qout, avgnote: ${c/b} }]`);
+
+
+
+
+
+  
+//5. Create a function that moves all capital letters to the front of a word.
+
+// Examples :
+// capToFront(hApPy) ➞ APhpy;
+// capToFront(moveMENT) ➞MENTmove;
+// capToFront(shOrtCAKE) ➞ OCAKEshrt;
+
+
+
+
+// let a="hApPy";
+
+// let b="";
+// let c="";
+
+// for(i=0;i<a.length;i++){
+
+//     if(a[i]==a[i].toUpperCase()){
+//         b+=a[i];    
+//     }
+//     if(a[i]==a[i].toLowerCase()){
+
+//         c+=a[i];
+// }
+// }
+// console.log(b+c);
+
+
+
+
+
+
+// function lavan(a,b,c) {
+
+//     for(i=0;i<a.length;i++){
+//         if(a[i]==a[i].toUpperCase()){
+//          b+=a[i];    
+//      }
+//     if(a[i]==a[i].toLowerCase()){
+
+//         c+=a[i];  
+//     }
+// }
+//     return b+c;
+    
+// }
+// let x=lavan("hApPy","","");
+// console.log(x);
+
+
+
+
+
+
+
+// function lavan(a,b,c) {
+
+//     for(i=0;i<a.length;i++){
+//         if(a[i]==a[i].toUpperCase()){
+//          b+=a[i];    
+//      }
+//     if(a[i]==a[i].toLowerCase()){
+
+//         c+=a[i];  
+//     }
+// }
+//     return b+c;
+    
+// }
+// let x=lavan("shOrtCAKE","","");
+// console.log(x);
+
+
+
+
+
+
+
+// function lavan(a,b,c) {
+
+//     for(i=0;i<a.length;i++){
+//         if(a[i]==a[i].toUpperCase()){
+//          b+=a[i];    
+//      }
+//     if(a[i]==a[i].toLowerCase()){
+
+//         c+=a[i];  
+//     }
+// }
+//     return b+c;
+    
+// }
+// let x=lavan("moveMENT","","");
+// console.log(x);
+
+
+
+
+
+
+
+//6.   Count each occurrence of number(can not use predefined function).
+//     Input: [1,6,3,1,5,9,7,2,1,9,3,7,8,9,10] , no find=7
+//     Output: 1 present 2 times.
+//     2 present 1 times.
+//     3 present 2 times.
+//     5 present 1 times ……. Etc
+
+
+
+// let a=[1,6,3,1,5,9,7,2,1,9,3,7,8,9,10];
+
+// let b=1;
+
+// let c=[];
+
+// for(i=0;i<a.length;i++){
+
+//     if(a[i]==b){
+       
+//         c.push(a[i]) 
+      
+//     }
+// }
+// console.log(`${b} present  ${c.length} times`);
+
+
+
+
+
+
+// let a=[1,6,3,1,5,9,7,2,1,9,3,7,8,9,10];
+// let b={};
+
+// for(i of a){
+
+//     b[i]=b[i] ? b[i]+1 :1;
+// }
+
+// console.log(b);
+
+
+
+
+
+
+
+
+//  7. Write a function that accepts an array of strings. Return the longest string(can not
+//     use predefined function).
+
+//     Input: [‘nik’, ’mikhil’, ’Cow’,’Elephant’]
+//     Output: Elephant
+
+
+
+
+
+// let a=["nil","mikhil","cow","elephant"];
+
+// let b="";
+
+// for(i=0;i<a.length;i++){
+//     for(j=i+1;j<a[i].length;j++){
+
+//      if(a[i]>a[j]){
+
+//         b=a[j]
+        
+//      }
+//     }
+// }
+// console.log(b);
+
+
+
+
+
+//   8. Most Commonly Used two Character in String(can not use predefined function)
+
+//      Input: ‘Hii i am ram’
+//      Output; i, a
+
+
+
+
+// let a="Hii iam ram";
+
+// let aa=(a.match(/i/g));
+// console.log(aa +" = "+ aa.length);
+
+// let aaa=(a.match(/a/g));
+// console.log(aaa +" = "+ aaa.length );
+
+
+
+
+// let a="Hiiiamram";
+
+// let b="";
+
+// for(i=0;i<a.length;i++){
+
+//     if(a[i]==="i" || a[i]==="a"){
+
+//         b+=a[i]
+//     }
+// }
+// console.log(b);
+
+
 
 
 
@@ -1477,6 +1696,7 @@
 
 
 
+
 //    11.Write Program to remove duplicate elements in an array and sort it in Accending order(can not use predefined function).
 
 			// Input: [Z, A, P, C, A, Z , K, N, C]
@@ -1505,6 +1725,26 @@
             //     }
             // }
             // console.log(b);
+
+
+
+
+
+
+
+//12.   If subseq&#39;s array sequence is present in the array, returns true or else returns
+//      false.
+//      Let arr = [5, 7, 3, 2, 2, 7,-1, 5, -3, 13, 4]
+//      Example:
+//      Input : Subseq1 = [7, -1, 5, -3] Output: true
+//      Subseq2 = [7, -1, 4, -3] : false
+//      Subseq3 = [ -1] : true
+//      Subseq4 = [13, -3, 4, 1] : false
+
+
+//??????????????????????????????????????????????????????????????????
+
+
 
 
 
@@ -1549,6 +1789,9 @@
 //         c+=b[i]
 // }
 // console.log(c);
+
+
+
 
 
 
