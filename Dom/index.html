@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom</title>
+</head>
+
+<style>
+
+pre{
+    
+    font-size: larger;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button{
+
+    padding: 8px;
+    background-color: rgb(198, 216, 216);
+    color: red;
+    
+}
+
+
+</style>
+
+<body>
+
+    <center>
+        <h1 style="text-decoration: underline rgb(255, 54, 54); ">String MCQ </h1>
+    </center><br>
+
+    <pre>1. In JavaScript, which data type is used to represent text and is enclosed in either single or double quotes?
+
+        A) String
+        B) Text
+        C) Character
+        D) Char</pre><br>
+
+    <button onclick="lavan()"> Click To Answer</button>
+
+    <h3 id="kk"></h3>
+    <hr>
+    <pre>2. What is the result of `"Hello, " + "world!"` in JavaScript?
+
+    A) "Helloworld!"
+    B) "Hello, world!"
+    C) "Hello,world!"
+    D) "Hello world!"</pre>
+
+    <button onclick="lavan1()">Click To Answer</button>
+
+    <h3 id="ll"></h3>
+    <hr>
+
+
+    <pre>3. Which character is used as an escape character to include special characters in a string?
+
+        A) /
+        B) \
+        C) |
+        D) :
+     </pre>
+    <button id="olol">Click To Answer</button>
+    <h3 id="pp"></h3>
+    <hr>
+    <pre>
+    4. What is the maximum length of a string in JavaScript?
+
+   A) 64 characters
+   B) 128 characters
+   C) 1024 characters
+   D) There is no fixed limit
+</pre>
+    <button id="pop">Click To Answer</button>
+    <h3 id="lkl"></h3>
+    <hr>
+    <pre>5. Which of the following is a valid way to create a multi-line string in JavaScript?
+
+    A) "Line 1\nLine 2\nLine 3"
+    B) "Line 1, Line 2, Line 3"
+    C) 'Line 1\nLine 2\nLine 3'
+    D) `Line 1
+       Line 2
+       Line 3`</pre>
+    <button id="opk">Click To Answer</button>
+    <h3 id="lokk"></h3>
+    <hr>
+
+
+
+    <pre>6. What method is used to get the length of a string in JavaScript?
+
+        A) `strLen()`
+        B) `length()`
+        C) `size()`
+        D) `str.length`</pre>
+    <button onclick="kuk()">Click To Answer</button>
+    <h3 id="l2l"></h3>
+    <hr>
+
+
+    <pre>7. How do you access the character at a specific index within a string?
+
+            A) `str.characterAt(3)`
+            B) `str.charAt(3)`
+            C) `str.get(3)`
+            D) `str.substring(3)`</pre>
+    <button id="lolaa">Click To Answer</button>
+    <h3 id="jkj"></h3>
+    <hr>
+
+    <pre>8. Which operator is used for comparing two strings in JavaScript?
+
+                A) ==
+                B) ===
+                C) !=
+                D) !==
+             </pre>
+    <button onclick="jkjj()">Click To Answer</button>
+    <h3 id="lokd"></h3>
+    <hr>
+
+    <pre>9. What is the result of `"123" + 4` in JavaScript?
+
+        A) "127"
+        B) "1234"
+        C) 127
+        D) 1234</pre>
+    <button onclick="fhk()">Click To Answer</button>
+    <h3 id="mnm"></h3>
+    <hr>
+
+    <pre>10. What is the result of `"5" - 2` in JavaScript?
+
+    A) 7
+    B) 3
+    C) "52"
+    D) "3"
+</pre>
+    <button onclick="alert('Correct Answer is B')">Click To Answer</button>
+
+    <script>
+
+        function fhk() {
+
+            document.getElementsByTagName("button");
+            document.getElementById("mnm").innerText = "Correct Answer is 'B'"
+
+        }
+
+        function jkjj() {
+
+            document.querySelector("button");
+            document.getElementById("lokd").innerText = "Correct Answer is 'A'"
+        }
+
+
+
+        let strr = document.getElementById("lolaa");
+
+        strr.addEventListener("click", function () {
+
+            document.getElementById("jkj").innerText = "Correct Answer is 'B'"
+
+        })
+
+        function kuk() {
+
+            document.getElementsByTagName("button");
+            document.getElementById("l2l").innerHTML = "Correct Answer is 'B'"
+
+        }
+
+        function lavan() {
+            document.getElementsByTagName("button");
+            document.getElementById("kk").innerHTML = " Correct Answer is 'A'"
+
+        }
+
+        function lavan1() {
+
+            document.getElementsByTagName("button");
+            document.getElementById("ll").innerHTML = "Correct Answer is 'B'"
+
+        }
+
+
+        let oko = document.getElementById("olol");
+
+        oko.addEventListener("click", function () {
+
+            document.getElementById("pp").innerHTML = "Correct Answer is 'B'"
+        })
+
+
+        let oget = document.getElementById("pop");
+
+        oget.addEventListener("click", function () {
+
+            document.getElementById("lkl").innerText = "Correct Answer is 'D'"
+        })
+
+
+
+        let n = document.getElementById("opk");
+        n.addEventListener("click", function () {
+
+            document.getElementById("lokk").innerText = "Correct Answer is 'A'"
+
+        })
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
