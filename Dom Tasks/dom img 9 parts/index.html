@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom img </title>
+
+
+    <style>
+        .gr{
+            display: grid;
+            grid-template-columns: 30%,30%,30%;
+            grid-template-rows: 20%,20%,20%;
+
+            width: 100%;
+            height: 500px;
+
+           justify-content: center;
+        }
+        button{
+            padding: 20px;
+            margin: 20px;
+            position: relative;
+            left: 20%;
+            top: 50px;
+            background-color: rgb(146, 235, 158);
+            
+        }
+    </style>
+</head>
+
+
+
+<body>
+
+
+<div class="gr">
+    <img src="./cut_image_part_01.jpg" alt="" width="100%" height="100%" style="grid-column: 1/2;grid-row: 1/2; visibility: hidden;"  >
+    <img src="./cut_image_part_02.jpg" alt="" width="100%" height="100%" style="grid-column: 2/3;grid-row: 1/2;visibility: hidden;">
+    <img src="./cut_image_part_03.jpg" alt="" width="100%" height="100%" style="grid-column: 3/4;grid-row: 1/2;visibility: hidden;">
+    <img src="./cut_image_part_04.jpg" alt="" width="100%" height="100%" style="grid-column: 1/2;grid-row: 2/3;visibility: hidden;">
+    <img src="./cut_image_part_05.jpg" alt=""width="100%" height="100%"  style="grid-column: 2/3;grid-row: 2/3;visibility: hidden;">
+    <img src="./cut_image_part_06.jpg" alt=""width="100%" height="100%" style="grid-column: 3/4;grid-row: 2/3;visibility: hidden;">
+    <img src="./cut_image_part_07.jpg" alt=""width="100%" height="100%" style="grid-column: 1/2;grid-row: 3/4;visibility: hidden;">
+    <img src="./cut_image_part_08.jpg" alt=""width="100%" height="100%" style="grid-column: 2/3;grid-row: 3/4;visibility: hidden;">
+    <img src="./cut_image_part_09.jpg" alt=""width="100%" height="100%" style="grid-column: 3/4;grid-row: 3/4;visibility: hidden;">
+</div>
+<br><br>
+
+<button> Part 1 </button>
+<button> Part 2 </button>
+<button> Part 3 </button>
+<button> Part 4 </button>
+<button> Part 5 </button>
+<button> Part 6 </button>
+<button> Part 7 </button>
+<button> Part 8 </button>
+<button> Part 9 </button>
+<button>clear</button>
+
+<script>
+
+let aa=document.getElementsByTagName("button");
+
+let imggg=document.getElementsByTagName("img")
+
+
+aa[0].addEventListener("click",()=>{
+
+
+    imggg[0].style.visibility="visible";
+})
+
+aa[1].addEventListener("click",()=>{
+
+    imggg[1].style.visibility="visible";
+})
+
+aa[2].addEventListener("click",()=>{
+
+imggg[2].style.visibility="visible";
+})
+aa[3].addEventListener("click",()=>{
+
+imggg[3].style.visibility="visible";
+})
+aa[4].addEventListener("click",()=>{
+
+imggg[4].style.visibility="visible";
+})
+aa[5].addEventListener("click",()=>{
+
+imggg[5].style.visibility="visible";
+})
+aa[6].addEventListener("click",()=>{
+
+imggg[6].style.visibility="visible";
+})
+aa[7].addEventListener("click",()=>{
+
+imggg[7].style.visibility="visible";
+})
+aa[8].addEventListener("click",()=>{
+
+imggg[8].style.visibility="visible";
+})
+aa[9].addEventListener("click",()=>{
+
+
+for(i=0;i<imggg.length;i++){
+    let c=imggg[i];
+
+    console.log(c);
+    c.style.visibility="hidden"
+}
+
+})
+
+
+
+
+</script>
+</body>
+</html>

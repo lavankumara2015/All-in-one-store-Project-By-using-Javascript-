@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sheffel imgs</title>
+    <style>
+
+        .jj{
+            width: 600px;
+            height: 500px;
+          display: grid;
+            grid-template-columns: 30%,30%;
+         grid-template-rows: 30%,30%;
+         grid-gap: 3%;
+    position: relative;
+    left: 650px;
+    padding: 100px;
+
+        }
+        button{
+            padding: 15px;
+            margin: 10px;
+            border-radius: 10px;
+            background-color: rgb(0, 0, 0);
+            color: white;
+            font-size: larger;
+          position: relative;
+          left: 37.5%;
+        }
+    </style>
+</head>
+<body>
+    <div class="jj">
+    <img src="./cut_image_part_04.jpg" alt="" width="100%" height="100%" style="grid-column: 1/2;grid-row: 1/2;">
+    <img src="./cut_image_part_05.jpg" alt="" width="100%" height="100%" style="grid-column: 2/3;grid-row: 1/2;">
+    <img src="./cut_image_part_09.jpg" alt="" width="100%" height="100%" style="grid-column: 3/4;grid-row: 1/2;">
+    <img src="./cut_image_part_01.jpg" alt="" width="100%" height="100%" style="grid-column: 1/2;grid-row: 2/3;">
+    <img src="./cut_image_part_02.jpg" alt=""width="100%" height="100%"  style="grid-column: 2/3;grid-row: 2/3;">
+    <img src="./cut_image_part_06.jpg" alt=""width="100%" height="100%" style="grid-column: 3/4;grid-row: 2/3;">
+    <img src="./cut_image_part_07.jpg" alt=""width="100%" height="100%" style="grid-column: 1/2;grid-row: 3/4;">
+    <img src="./cut_image_part_03.jpg" alt=""width="100%" height="100%" style="grid-column: 2/3;grid-row: 3/4;">
+    <img src="./cut_image_part_08.jpg" alt=""width="100%" height="100%" style="grid-column: 3/4;grid-row: 3/4;">
+    
+</div>
+
+<br><br>
+
+<button>Sheffel</button>
+<button>Unsheffel</button>
+<button>Combaine</button>
+<button>un-combaine</button>
+
+<script>
+
+let imgg=document.getElementsByTagName("img");
+
+let btn=document.getElementsByTagName("button");
+
+let kok=document.getElementsByClassName("jj")
+
+
+
+btn[0].addEventListener("click",()=>{
+
+    imgg[0].setAttribute("src","./cut_image_part_01.jpg");
+    imgg[1].setAttribute("src","./cut_image_part_02.jpg");
+    imgg[2].setAttribute("src","./cut_image_part_03.jpg");
+    imgg[3].setAttribute("src","./cut_image_part_04.jpg");
+    imgg[4].setAttribute("src","./cut_image_part_05.jpg");
+    imgg[5].setAttribute("src","./cut_image_part_06.jpg");
+    imgg[6].setAttribute("src","./cut_image_part_07.jpg");
+    imgg[7].setAttribute("src","./cut_image_part_08.jpg");
+    imgg[8].setAttribute("src","./cut_image_part_09.jpg");
+    
+})
+
+btn[1].addEventListener("click",()=>{
+
+    imgg[0].setAttribute("src","./cut_image_part_04.jpg");
+    imgg[1].setAttribute("src","./cut_image_part_05.jpg");
+    imgg[2].setAttribute("src","./cut_image_part_09.jpg");
+    imgg[3].setAttribute("src","./cut_image_part_01.jpg");
+    imgg[4].setAttribute("src","./cut_image_part_02.jpg");
+    imgg[5].setAttribute("src","./cut_image_part_06.jpg");
+    imgg[6].setAttribute("src","./cut_image_part_07.jpg");
+    imgg[7].setAttribute("src","./cut_image_part_03.jpg");
+    imgg[8].setAttribute("src","./cut_image_part_08.jpg");
+
+})
+
+btn[2].addEventListener("click",()=>{
+
+    for(i=0;i<kok.length;i++){
+        var kl=kok[i];
+
+        kl.style.gridGap="0"
+    }
+    
+})
+btn[3].addEventListener("click",()=>{
+
+    for(i=0;i<kok.length;i++){
+        var kl=kok[i];
+
+        kl.style.gridGap="3%"
+    }
+
+
+})
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

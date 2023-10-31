@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom tasks</title>
+
+    <style>
+
+        button{
+            padding: 15px;
+            margin: 20px;
+            background-color:rgb(255, 244, 187) ;
+            border-radius: 15px;
+        }
+    </style>
+
+
+</head>
+<body>
+
+   
+    <button>Prabhas</button> 
+    <button>Virat Kholi</button>
+    <button>Allu Arjun</button>
+    <button>Mahesh babu</button>
+    <button>Hero passion</button>
+    <button>Clear</button>
+
+    
+    <script>
+
+
+let ab=document.createElement("img");
+document.body.appendChild(ab);
+ab.style.width="500px"
+ab.style.display="block"
+ab.style.padding="50px"
+let btn=document.getElementsByTagName("button");
+
+
+let imgg=document.getElementsByTagName("img");
+
+
+btn[0].addEventListener("click",()=>{
+
+    imgg[0].setAttribute("src","./746-0-12fad64ea66aa5787fbfcce858e32cb7.jpg");
+    ab.style.display="block";
+
+})
+
+btn[1].addEventListener("click",()=>{
+
+    imgg[0].setAttribute("src","./638279314458276115_image_thumbnail_webp.webp");
+    ab.style.display="block"
+})
+btn[2].addEventListener("click",()=>{
+
+    imgg[0].setAttribute("src","./alluarjun41690282983.webp");
+    ab.style.display="block"
+})
+btn[3].addEventListener("click",()=>{
+
+    imgg[0].setAttribute("src","./prince-1557223159.jpg");
+    ab.style.display="block"
+})
+
+btn[4].addEventListener("click",()=>{
+
+    imgg[0].setAttribute("src","./black-with-heavy-grey-hero-passionpro-image.jpeg");
+    ab.style.display="block"
+
+})
+
+btn[5].addEventListener("click",()=>{
+
+    ab.style.display="none"
+})
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
