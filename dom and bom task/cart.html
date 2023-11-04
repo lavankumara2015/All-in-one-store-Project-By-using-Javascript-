@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart</title>
+</head>
+<body>
+
+
+
+
+    <div class="ik"></div>
+
+    <script>
+
+
+
+
+
+
+
+
+
+
+let btnn=document.createElement("button");
+document.body.appendChild(btnn);
+
+
+let storage=localStorage.getItem("adding to cart")
+
+
+ storage==null?[]:storage=JSON.parse(storage);
+
+
+ storage.map((val,ind)=>{
+
+
+
+    
+  
+
+btnn.innerText=` cart count ${storage.length} `
+
+
+    let imgg=document.createElement("img");
+
+
+    let p=document.createElement("p")
+    console.log(val.title);
+    p.innerText=val.description;
+    document.body.appendChild(p)
+
+
+    imgg.setAttribute("src",val["thumbnail"]);
+
+    document.body.appendChild(imgg);
+})
+
+
+
+
+
+   
+
+
+
+
+
+
+
+</script>
+
+
+    
+</body>
+</html>

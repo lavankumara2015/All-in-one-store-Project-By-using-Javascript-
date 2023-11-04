@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>see more</title>
+    <style>
+        *{
+
+background-color: rgb(188, 216, 216);
+
+}
+    </style>
+</head>
+<body>
+
+
+    <script>
+
+let gett=JSON.parse(localStorage.getItem("seemore"));
+
+
+
+let h11=document.createElement("h1");
+
+h11.innerText=`Item.no : ${gett.id}`
+    
+document.body.appendChild(h11)
+
+
+    let imgg=document.createElement("img");
+
+    imgg.style.width="150px";
+
+    imgg.setAttribute("src",gett["image"]);
+    document.body.appendChild(imgg);
+
+
+    let p=document.createElement("p");
+
+    p.innerText=gett.description
+    document.body.appendChild(p);
+
+    let h22=document.createElement("h3");
+
+    h22.innerText=` category : ${gett.category}`
+
+    document.body.appendChild(h22)
+
+
+    let h1=document.createElement("h3");
+    h1.innerText=`Rating :${gett.rating.rate}`
+
+    document.body.appendChild(h1);
+
+    
+    let h2=document.createElement("h3");
+    h2.innerText=`Rating : ${gett.rating.count} count`
+
+    document.body.appendChild(h2);
+
+    </script>
+    
+</body>
+</html>

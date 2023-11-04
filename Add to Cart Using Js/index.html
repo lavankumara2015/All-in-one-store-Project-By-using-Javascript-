@@ -10,6 +10,8 @@
 
 *{
 
+    background-color: rgb(188, 216, 216);
+
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 button{
@@ -32,22 +34,24 @@ h1{
 }
 
 
+
 </style>
 <body>
     <body>
     <br>
 <center> <h1 >All-in-one Store</h1></center>
        
-<br><br>
+<br>
        
 <button>All</button>
 <button>Men's clothing</button>
 <button>Electronics</button>
 <button>Jewelery</button>
 <button>Women's clothing</button>
+<button style="background-color: rgb(255, 0, 255); color: black;" id="btnn1">Cart</button>
 <br><br>
 
-<table border="1" cellpadding="15px" cellspacing="0"></table>
+<center><table border="1" cellpadding="15px" cellspacing="0"></table></center>
     
 
 
@@ -302,7 +306,21 @@ h1{
     var btnn=document.getElementsByTagName("button");
 
 
-  
+  let bttn=document.getElementById("btnn1");
+
+  bttn.addEventListener("click",()=>{
+
+    location.assign("./cart.html");
+
+ 
+  })
+
+
+//   let okok=JSON.parse(localStorage.getItem("cart"));
+//    btnn1.innerText=`Cart ${okok.length} `
+
+
+
 
 
     btnn[0].addEventListener("click",()=>{
@@ -404,6 +422,7 @@ btnn[4].addEventListener("click",()=>{
 })
 
 
+
 function lavann(getfun) {
 
     getfun.filter((val,ind,array)=>{
@@ -411,12 +430,53 @@ function lavann(getfun) {
     let tdcreate=document.createElement("td");
     let tdcreate1=document.createElement("td");
     let tdcreate2=document.createElement("td");
-    let tdcreate3=document.createElement("td");
     let tdcreate4=document.createElement("td");
     let tdcreate5=document.createElement("td");
-    let tdcreate6=document.createElement("td");
-    let tdcreate7=document.createElement("td");
+    let tdcreate111=document.createElement("td");
+    let tdcreate112=document.createElement("td");
 
+    let btn=document.createElement("button");
+    btn.innerText="See more";
+    tdcreate111.appendChild(btn);
+
+    btn.setAttribute("id","lavan");
+   
+
+    btn.addEventListener("click",()=>{
+
+window.location.assign("./seemore.html");
+
+localStorage.setItem("seemore",JSON.stringify(getfun[ind]))
+
+});
+
+
+
+
+    let btnn=document.createElement("button");
+    btnn.innerText="Add to cart";
+
+
+btnn.addEventListener("click",()=>{
+
+    let value=JSON.parse(localStorage.getItem("cart"));
+
+    let val= value!=null ? value : [];
+
+    val.push(getfun[ind]);
+
+    localStorage.setItem("cart",JSON.stringify(val))
+
+
+})
+
+
+
+
+    tdcreate112.appendChild(btnn);
+
+    
+  
 
     let imgh=document.createElement("img");
 
@@ -431,29 +491,36 @@ function lavann(getfun) {
 
 tdcreate.innerText=val.id
 tdcreate1.innerText=val.title
-tdcreate2.innerText=val.price
-tdcreate3.innerText=val.description
+tdcreate2.innerText=` Price ${val.price} $`
+
 tdcreate4.innerText=val.category
-tdcreate6.innerText=val.rating.rate
-tdcreate7.innerText=val.rating.count
 
    let trcreate=document.createElement("tr");
 
    trcreate.appendChild(tdcreate);
    trcreate.appendChild(tdcreate1);
    trcreate.appendChild(tdcreate2);
-   trcreate.appendChild(tdcreate3);
    trcreate.appendChild(tdcreate4);
    trcreate.appendChild(tdcreate5);
-   trcreate.appendChild(tdcreate6);
-   trcreate.appendChild(tdcreate7);
+   trcreate.appendChild(tdcreate111);
+   trcreate.appendChild(tdcreate112);
 
    gettingtable[0].appendChild(trcreate);
   
 
+
+
+
 });
     
 }
+
+
+
+
+
+
+
 
 
 

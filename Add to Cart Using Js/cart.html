@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart item</title>
+    <style>
+        *{
+
+background-color: rgb(188, 216, 216);
+
+}
+    </style>
+</head>
+<style>
+
+    button{
+
+        background-color: black;
+        color: white;
+        font-size: 20px;
+        
+    }
+    img{
+
+       margin-top: 55px;
+    }
+    div{
+ 
+        width: 450px;
+        border: 2px solid red;
+
+    }
+</style>
+<body>
+<br>
+    <center>  <button></button>
+  <button>Cart Clear</button><br><br>
+ <div></div></center> 
+ 
+<script>
+
+
+    let lavan=JSON.parse(localStorage.getItem("cart"));
+
+     lavan == null? []:lavan;
+
+
+
+
+     lavan.map((val,ind,arr)=>{
+
+        let ojo=document.getElementsByTagName("button");
+
+ojo[0].innerText=`Cart Item ${lavan.length} `
+
+ojo[1].addEventListener("click",()=>{
+
+    localStorage.clear()
+    location.reload();
+})
+
+
+
+        let imgg=document.createElement("img");
+
+        imgg.setAttribute("src",val["image"]);
+
+        imgg.style.width="150px"
+
+        
+let div = document.getElementsByTagName("div");
+div[0].appendChild(imgg);
+
+
+let h22=document.createElement("h3");
+
+h22.innerText=` category : ${val.category}`
+
+div[0].appendChild(h22)
+
+
+let h12=document.createElement("h1");
+
+    h12.innerText=`    ${val.price} $`
+    div[0].appendChild(h12)
+
+
+
+
+let p=document.createElement("p");
+
+    p.innerText=val.description
+    div[0].appendChild(p)
+
+  
+
+
+    let h1=document.createElement("h3");
+    h1.innerText=`Rating :${val.rating.rate}`
+
+div[0].appendChild(h1)
+
+    
+    let h2=document.createElement("h3");
+    h2.innerText=`Rating : ${val.rating.count} count`
+
+    div[0].appendChild(h2)
+
+
+
+    let btn1=document.createElement("button");
+
+btn1.innerText="Buy now";
+
+btn1.style.display="block"
+btn1.addEventListener("click",()=>{
+
+    location.assign("./buynow.html")
+})
+
+div[0].appendChild(btn1)
+
+
+
+     })
+     
+ 
+
+
+
+</script>
+</body>
+</html>

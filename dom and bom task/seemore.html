@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- <button>back</button> -->
+    
+
+    <script>
+
+
+
+let see1=JSON.parse(localStorage.getItem("seemore"));
+
+// console.log(localStorage.getItem("seemore"));
+
+let creimg=document.createElement("img");
+
+creimg.setAttribute("src",see1.thumbnail);
+
+// creimg.innerText=see1.description
+
+
+document.body.appendChild(creimg);
+
+
+// let btnn=document.getElementsByTagName("button");
+
+
+
+// btnn.addEventListener("click",()=>{
+
+//     window.history.back()
+// })
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

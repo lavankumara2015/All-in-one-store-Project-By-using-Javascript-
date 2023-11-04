@@ -1888,6 +1888,46 @@
 
 
 
+
+
+    //.........memorization.........
+
+
+    function lavan(){
+
+        let obj={}
+
+        return (num)=>{
+
+            if (obj[num]!== undefined){
+
+                return (` memory oject ${obj[num]}`);
+                
+            }else{
+
+                let sum=0
+                for(i=0; i<=num; i++){
+
+                    sum=sum+i;
+
+                    obj[num]=sum
+                }
+                return sum
+            }  
+          
+        }
+
+    }
+
+    let oko=lavan()
+    console.log(oko(5));
+    console.log(oko(4));
+    console.log(oko(10));
+    console.log(oko(5));
+    console.log(oko(10));
+    console.log(oko(4));
+
+
     </script>
 </body>
 
