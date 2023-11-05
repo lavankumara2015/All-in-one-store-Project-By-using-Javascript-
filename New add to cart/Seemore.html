@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>See more</title>
+
+    <style>
+
+
+#sapce {
+
+margin-left: 10px;
+height: 500px;
+
+}
+
+#div12 {
+
+border: 2px solid rgba(171, 15, 255, 0.415);
+
+box-shadow: 0 0 40px 20px rgba(0, 0, 0, 0.444);
+
+margin-left: 25px;
+margin-top: 100px;
+
+width: 380px;
+
+}
+
+    </style>
+</head>
+<body>
+
+<center><div id="seem1"></div></center>
+
+
+    <script>
+
+        let div=document.getElementById("seem1")
+
+let gett=JSON.parse(localStorage.getItem("see"));
+
+
+var div1 = document.createElement("div");
+
+div1.setAttribute("id", "div12")
+
+div1.innerHTML = ` <div id="sapce"><br>
+<b>   Product No:  ${gett.id} </b>
+<br><br>
+<center>   <img src='${gett.image}' style='height:100px'> <br><br>    
+<h2>${gett.category}</h2></center>
+<p>${gett.description}</p>
+
+<P> Rating : ${gett.rating.rate}<p>
+    <P> Count : ${gett.rating.count}<p>
+   <center> <h3>Price: <b>   ${gett.price} $ </h3></center> <br>
+
+<br><br> </div>
+`;
+
+div.appendChild(div1)
+
+  
+</script>
+</body>
+</html>

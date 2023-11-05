@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy now</title>
+<style>
+
+#sapce {
+
+margin-left: 10px;
+height: 500px;
+
+}
+
+#div12 {
+
+border: 2px solid rgba(171, 15, 255, 0.415);
+
+box-shadow: 0 0 40px 20px rgba(0, 0, 0, 0.444);
+
+margin-left: 205px;
+margin-top: 100px;
+
+width: 380px;
+
+
+}
+section{
+    display: flex;
+}
+#btn{
+
+    margin-left: 20%;
+    margin-top: 13%;
+   
+}
+#btn3{
+
+    background-color: rgba(239, 172, 244, 0.758);
+
+margin-left: 25px;
+padding: 12px;
+border-radius: 50px;
+position: relative;
+top: -10px;
+
+
+
+}
+
+    </style>
+    </head>
+    <body>
+<section>
+<div id="seem1"></div>
+
+<div id="btn">
+
+
+</div>
+</section>
+
+
+    <script>
+
+        let div=document.getElementById("seem1")
+
+let gett=JSON.parse(localStorage.getItem("buy"));
+
+
+var div1 = document.createElement("div");
+
+div1.setAttribute("id", "div12")
+
+div1.innerHTML = ` <div id="sapce"><br>
+
+<br><br>
+<center>   <img src='${gett.image}' style='height:100px'> <br><br>    
+<h2>${gett.category}</h2></center>
+<p>${gett.description}</p>
+
+<P> Rating : ${gett.rating.rate}<p>
+    <P> Count : ${gett.rating.count}<p>
+   <center> <h3>Price: <b>   ${gett.price} $ </h3></center> <br>
+
+<br><br> </div>
+`;
+
+div.appendChild(div1);
+
+let divv=document.getElementById("btn");
+
+let check=document.createElement("div");
+check.innerHTML=` <div>
+
+    <h1>Payment Mode Select Here :</h1><br>
+    
+    <h3
+    >
+  <input type="radio" id="Cash on Delivery" name="fav_language" value="Cash on Delivery">
+  <label for="html">Cash on Delivery</label><br>
+  <input type="radio" id="EMI" name="fav_language" value="EMI">
+  <label for="css">EMI</label><br>
+  <input type="radio" id="Credit card " name="fav_language" value="Credit card ">
+  <label for="css">Credit card </label><br>
+  <input type="radio" id="Debit card " name="fav_language" value="Debit card ">
+  <label for="css">Debit card </label><br>
+  <input type="radio" id="Paylater" name="fav_language" value="Paylater">
+  <label for="javascript">Paylater</label><br><br><br>
+
+</h3>
+</div>`
+
+    divv.appendChild(check)
+
+
+let btnn=document.createElement("button");
+
+btnn.setAttribute("id","btn3")
+
+btnn.innerHTML="Pay Here";
+
+btnn.addEventListener("click",()=>{
+
+    location.assign("./payhere.html")
+})
+
+divv.appendChild(btnn)
+
+
+</script>
+
+
+</body>
+</html>
