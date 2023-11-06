@@ -10,12 +10,23 @@
 
     background-color: rgba(239, 172, 244, 0.758);
 
-margin-left: 25px;
+border-radius: 50px;
+
+margin-left: 60px;
 padding: 12px;
 
 position: relative;
-top: 10px;
+top: 40px;
 
+}
+
+#div1{
+
+    display: grid;
+            grid-template-columns: 30% 30% 30%;
+            column-gap: 4%;
+            row-gap: 2%;
+  
 }
 #dii{
 
@@ -30,6 +41,7 @@ width: 380px;
 
 text-align: center;
 }
+
         
     </style>
 </head>
@@ -46,19 +58,20 @@ text-align: center;
 
 let local=JSON.parse(localStorage.getItem("cart"));
 
-
+let div12=document.getElementById("div1");
 console.log(local);
 local==null ? []: local;
 
 
 local.map((val,ind)=>{
+    
 
     let btn11=document.createElement("button");
 
     btn11.innerText="Cart list";
 
 
-    let div12=document.getElementById("div1");
+   
 
 
 let ikj=document.createElement("div");
@@ -79,23 +92,56 @@ ikj.innerHTML=` <div id="dii">
 
 
 
+
+
 let bb=document.createElement("button");
 
-bb.innerText="Delete";
+bb.innerText="Remove to Cart";
 
-div12.appendChild(bb);
+bb.setAttribute("id","ok");
+
+
+
 
 bb.addEventListener("click",()=>{
-  
- 
+
+
+    bb.style.display="none";
+
+    ikj.style.display="none";
+//   const index = local.findIndex((item)=>item.id===val.id)
+//   if(index>-1){
+//     local.splice(index,1)
+//     ikj.remove()
+//   }
     
 })
 
+ikj.appendChild(bb);
 div12.appendChild(ikj);
 
 
+
+let bbb=document.createElement("button");
+
+bbb.innerText="Buy now";
+
+bbb.setAttribute("id","ok");
+
+ikj.appendChild(bbb);
+
+bbb.setAttribute("class","cls")
+
+bbb.addEventListener("click",()=>{
+  
+    location.assign("./buynow.html");
+
+localStorage.setItem("buy", JSON.stringify(local[ind]))
+  
+    
 })
 
+})
 
 let btnn=document.getElementsByClassName("get12");
 
@@ -112,11 +158,11 @@ btnn1[0].addEventListener("click",()=>{
 
     let divb=document.createElement("h1");
 
-divb.innerText= "Cart Empty add Someting";
 
 document.body.appendChild(divb);
 
 })
+
 
 
 

@@ -374,6 +374,85 @@
 
 
 
+        let gett=document.getElementsByTagName("div");
+
+        function empty(){
+
+            gett[0].innerText="";
+        }
+
+
+        let button = document.getElementsByTagName("button");
+
+        button[0].addEventListener("click", () => {
+
+            empty()
+            lavan(api);
+        })
+
+        button[1].addEventListener("click", () => {
+
+            let men = [];
+
+            for (i = 0; i < api.length; i++) {
+
+                if (api[i].category == "Men's clothing") {
+
+                    men.push(api[i]);
+                }
+            }
+            empty()
+            lavan(men);
+        })
+
+
+        button[2].addEventListener("click", () => {
+
+            let men = [];
+
+            for (i = 0; i < api.length; i++) {
+
+                if (api[i].category == "Electronics") {
+
+                    men.push(api[i]);
+                }
+            }
+            empty()
+            lavan(men);
+        })
+
+        button[3].addEventListener("click", () => {
+
+            let men = [];
+
+            for (i = 0; i < api.length; i++) {
+
+                if (api[i].category == "Jewelery") {
+
+                    men.push(api[i]);
+                }
+            }
+            empty()
+            lavan(men);
+        })
+
+
+        button[4].addEventListener("click", () => {
+
+            let men = [];
+
+            for (i = 0; i < api.length; i++) {
+
+                if (api[i].category == "Women's clothing") {
+
+                    men.push(api[i]);
+                }
+            }
+            empty()
+            lavan(men);
+        })
+
+
 
         api.filter((val, ind, arr) => {
 
@@ -429,59 +508,139 @@
 
             let btn000 = document.createElement("button");
 
-btn000.innerText = "Add to cart";
+            btn000.innerText = "Add to cart";
 
-btn000.setAttribute("id", "btn");
-btn000.setAttribute("class", "btn0")
+            btn000.setAttribute("id", "btn");
+            btn000.setAttribute("class", "btn0")
 
-div1.appendChild(btn000);
-
-
-
-btn000.addEventListener("click", () => {
-
-    
-  window.confirm("You item added to cart" );
-
-    let val=JSON.parse(localStorage.getItem("cart"));
-
-    let gee= val!= null ? val :[];
-
-    gee.push(api[ind]);
-
-    localStorage.setItem("cart",JSON.stringify(gee));
-
-
-});
+            div1.appendChild(btn000);
 
 
 
-
-let span1=document.getElementById("span");
-
-span1.addEventListener("click",()=>{
-
-location.assign("./addtocart.html");
+            btn000.addEventListener("click", () => {
 
 
+                window.confirm("You item added to cart");
+
+                let val = JSON.parse(localStorage.getItem("cart"));
+
+                let gee = val != null ? val : [];
+
+                gee.push(api[ind]);
+
+                localStorage.setItem("cart", JSON.stringify(gee));
 
 
-})
+            });
 
 
+            let span1 = document.getElementById("span");
 
+            span1.addEventListener("click", () => {
 
+                location.assign("./addtocart.html");
 
-
-
-
-
-
+            });
+            
         });
 
+ 
+
+        function lavan(getele) {
+
+            getele.filter((val, ind, arr) => {
+
+                var div1 = document.createElement("div");
+
+                div1.setAttribute("id", "div12")
+
+                div1.innerHTML = ` <div id="sapce"><br>
+<b>   Product No:  ${val.id} </b>
+<br><br>
+<center>   <img src='${val.image}' style='height:100px'> <br><br>    
+<h2>${val.category}</h2></center>
+<h3>${val.title}</h3>
+
+<P> Rating : ${val.rating.rate}<p>
+    <P> Count : ${val.rating.count}<p>
+   <center> <h3>Price: <b>   ${val.price} $ </h3></center> <br>
+
+<br><br> </div>
+`;
+
+                let gi = document.getElementById('lavandiv').appendChild(div1);
+
+                let btn0 = document.createElement("button");
+
+                btn0.setAttribute("id", "btn");
+                btn0.setAttribute("class", "btn0")
+                btn0.innerText = "see more";
+
+                div1.appendChild(btn0);
+
+                btn0.addEventListener("click", () => {
+
+                    location.assign("./Seemore.html");
+
+                    localStorage.setItem("see", JSON.stringify(api[ind]))
+                });
+
+                let btn00 = document.createElement("button");
+
+                btn00.innerText = "Buynow";
+
+                btn00.setAttribute("id", "btn");
+                btn00.setAttribute("class", "btn0")
+                div1.appendChild(btn00);
+
+                btn00.addEventListener("click", () => {
+
+                    location.assign("./buynow.html");
+
+                    localStorage.setItem("buy", JSON.stringify(api[ind]))
+                });
+
+                let btn000 = document.createElement("button");
+
+                btn000.innerText = "Add to cart";
+
+                btn000.setAttribute("id", "btn");
+                btn000.setAttribute("class", "btn0")
+
+                div1.appendChild(btn000);
 
 
 
+                btn000.addEventListener("click", () => {
+
+
+                    window.confirm("You item added to cart");
+
+                    let val = JSON.parse(localStorage.getItem("cart"));
+
+                    let gee = val != null ? val : [];
+
+                    gee.push(api[ind]);
+
+                    localStorage.setItem("cart", JSON.stringify(gee));
+
+
+                });
+
+
+                let span1 = document.getElementById("span");
+
+                span1.addEventListener("click", () => {
+
+                    location.assign("./addtocart.html");
+
+
+
+                })
+
+            });
+
+        }
 
 
     </script>

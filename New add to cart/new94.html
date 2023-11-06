@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="goBack()">go back</button>
+    <div class="container" id="product-list">
+
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Image</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Delete</th>
+            </tr>
+        </thead>
+        <tbody id="cart-table-body">
+            <!-- Cart items will be populated here -->
+        </tbody>
+    </table>
+    <script>
+        var product = [{
+                id: 1,
+                title: "Headphones",
+                image: '../images/mobile.PNG',
+                price: 120
+            },
+            {
+                id: 2,
+                title: "Mobile",
+                image: '../images/mobile.PNG',
+                price: 178
+            },
+            {
+                id: 3,
+                title: "Watch",
+                image: '../images/mobile.PNG',
+                price: 999
+            },
+            {
+                id: 4,
+                title: "TV",
+                image: '../images/mobile.PNG',
+                price: 1999
+            }
+        ];
+
+        // var products = product.map(function(prod){
+            
+
+        //      document.getElementById('card').innerHTML +=`
+        //      <div class='card-title'>
+        //         <span>${prod.title}</span>
+        //     </div>`
+             
+        // })
+
+        function goBack(){
+            window.history.back();
+        }
+
+        var products = product.map(function (item) {
+            document.getElementById('product-list').innerHTML += `
+                <div class='container'>
+                    <div class="card  m-3 mb-4">
+                        <div class="card-header  p-2 m-1">
+                            <h3 id="title">${item.title}</h3>
+                            <img  id="image" src="${item.image}" width="200px">
+                        </div>
+                        <div class="card-body">
+                            <span id='price'>${item.price}</span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-primary w-100 " onclick="AddToCart(${item.id})">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>`;
+        });
+
+        cartItems=[]
+        function AddToCart(id){
+            var selectedItem = product.find((item)=>item.id === id);
+            alert(`Added item to cart ${selectedItem.title}`);
+            cartItems.push(selectedItem);
+            UpdateItems();
+        }
+
+        function UpdateItems(){
+            var productList = document.getElementById('cart-table-body');
+            productList.innerHTML = '';
+
+            cartItems.forEach(function(item){
+                let row=`
+                <tr>
+                        <td>${item.title}</td>
+                        <td><img src="${item.image}" width="50px"></td>
+                        <td id=''>${item.price}</td>
+                        <td>
+                            <button onclick="Decrement()" id="decrement" disabled>-</button>
+                            <span class="count">1</span>
+                            <button onclick="Increment()" id="increment">+</button>
+                        </td>
+                        <td><button class='btn btn-danger' onclick="DeleteBtn(${item.id})">Delete</button></td>
+                </tr>
+                `;
+                productList.innerHTML+=row;
+                
+            });
+            
+        }
+        
+        function DeleteBtn(id){   
+                          
+            cartItems.splice(id,1);
+            UpdateItems()
+
+        }
+        
+
+        var count = 1;
+        var price = document.getElementById('price').value;
+        var pr=document.getElementById('price').value;
+        function Increment() {
+            count++;
+            document.querySelector('.count').innerText = count;
+            var decrement = document.getElementById('decrement');
+            decrement.disabled = false;
+            pr=pr+price ;
+            var p = document.getElementById('price').innerHTML =pr;
+
+        }
+
+        function Decrement() {
+            count--;
+            if (count === 1) {
+                var decrement = document.getElementById('decrement');
+                decrement.disabled = true;
+            }
+            document.querySelector('.count').innerText = count;
+            pr=pr-price ;
+            var p = document.getElementById('price').innerHTML =pr;
+        }
+    </script>
+</body>
+</html>
