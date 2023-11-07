@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="">
+
+        username
+
+        <input type="text">
+
+        password
+
+        <input type="text">
+
+        <input type="submit">
+
+
+        <small style="display: none; color: red;">enter Valid username and password</small>
+    </form>
+</body>
+
+<script>
+
+
+
+
+    let form = document.getElementsByTagName("form");
+
+    form[0].addEventListener("submit", (e) => {
+
+        e.preventDefault();
+
+        let get = JSON.parse(localStorage.getItem("user"));
+
+        let user1 = e.target[0].value;
+        let pass1 = e.target[1].value;
+
+        for (gett of get) {
+
+            var user = gett.createusername
+            var pass = gett.createpassword
+
+            if (user == user1 && pass == pass1) {
+
+                window.location.assign("./welcome page.html");
+
+               
+            }
+            else{
+                user != user1 && pass != pass1
+                let small=document.getElementsByTagName("small");
+        small[0].style.display="block"
+
+            }
+        }
+
+    })
+
+    
+   
+
+
+
+
+
+</script>
+
+</body>
+
+</html>
