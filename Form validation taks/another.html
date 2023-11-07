@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="">
+
+        <input type="text" id="input1">
+        <input type="text" id="input2">
+        <input type="submit">
+        <input type="button" value="Reset" id="rese">
+
+
+    </form>
+
+
+    <div id="ull"></div>
+
+    <script>
+
+
+
+        let forms = document.getElementsByTagName("form");
+
+
+        let b = [];
+
+        forms[0].addEventListener("submit", (e) => {
+
+            e.preventDefault()
+
+
+            let input1 = document.getElementById("input1");
+            let input2 = document.getElementById("input2");
+
+
+            let username = e.target[0].value;
+            let password = e.target[1].value;
+
+
+            if (username[0] == username[0].toUpperCase() && username.length > 8 && password[0] == password[0].toUpperCase() && password.length > 6) {
+
+                b.push({ username: username, password: password });
+
+
+
+                let div = document.getElementById("ull")
+
+let ul = document.createElement("ol");
+
+let li1 = document.createElement("li");
+
+let li2 = document.createElement("li");
+
+                b.map((val, ind) => {
+
+
+
+                    li1.innerText = val.username;
+                    li2.innerText = val.password;
+
+                    
+
+                })
+
+                ul.appendChild(li1);
+                    ul.appendChild(li2);
+                    div.appendChild(ul);
+                localStorage.setItem("user", JSON.stringify(b))
+
+                alert("hello");
+            }
+            else {
+
+                alert("Not valid")
+            }
+
+
+            console.log(b);
+
+            e.target[0].value = "";
+            e.target[1].value = "";
+
+        });
+
+
+        let Reset = document.getElementById("rese");
+
+        Reset.addEventListener("click", () => {
+
+            let input1 = document.getElementById("input1");
+            let input2 = document.getElementById("input2");
+
+            input1.value = "";
+            input2.value = "";
+
+
+        });
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
