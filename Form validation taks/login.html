@@ -29,42 +29,101 @@
 <script>
 
 
+let forms=document.forms;
+
+// forms[0].addEventListener("submit",(e)=>{
 
 
-    let form = document.getElementsByTagName("form");
+//     e.preventDefault();
 
-    form[0].addEventListener("submit", (e) => {
+//     let get= JSON.parse(localStorage.getItem("user"))
 
-        e.preventDefault();
 
-        let get = JSON.parse(localStorage.getItem("user"));
+//     let username=e.target[0].value;
+//     let password=e.target[1].value;
 
-        let user1 = e.target[0].value;
-        let pass1 = e.target[1].value;
 
-        for (gett of get) {
+//     let getting=get.find((a)=>{
 
-            var user = gett.createusername
-            var pass = gett.createpassword
+      
 
-            if (user == user1 && pass == pass1) {
-
-                window.location.assign("./welcome page.html");
-
-               
-            }
-            else{
-                user != user1 && pass != pass1
-                let small=document.getElementsByTagName("small");
-        small[0].style.display="block"
-
-            }
-        }
-
-    })
-
-    
+//         return a.createusername==username && createpassword==password;
    
+//     })
+
+//     if (getting){
+
+//         window.location("./welcome page.html");
+        
+//     }else{
+
+//         alert("not valid")
+//     }
+
+
+// })
+
+
+
+
+// forms[0].addEventListener("submit",(e)=>{
+// e.preventDefault()
+// let details=JSON.parse(localStorage.getItem("user"))
+// let username=e.target[0].value
+// let password=e.target[0].value
+
+// let check=details.find((a)=>{
+//     return a.createusername==username&&a.createpassword==password
+// })
+
+// if(check){
+//     alert("ok")
+// }
+// else{
+//     alert("not ok")
+// }
+// })
+
+
+forms[0].addEventListener("submit",(e)=>{
+
+e.preventDefault();
+
+let get=JSON.parse(localStorage.getItem("user"))
+
+let username=e.target[0].value
+
+let password=e.target[1].value
+
+
+let gett=get.find((a)=>{
+
+
+    return a.createusername==username && a.createpassword==password
+})
+
+if(gett){
+
+   location.assign("./welcome page.html")
+
+}else{
+
+    alert("in valid")
+}
+
+
+})
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular expression</title>
+</head>
+<body>
+    
+
+
+<script>
+
+
+//........regular expression practice.......
+// it is 2 types  1. literal notation  2. constructor function 
+
+
+
+
+//.... flags  2 types 1. i (case sensitive),  g(global search) 
+
+
+// 1st type  literal notation
+
+
+
+// let re=/hEllo/i
+
+// let a = re.test("hello javascript");
+
+// console.log(a);
+
+
+
+
+
+
+// let mob=/^[0-9]{10}$/        // ^ start with number and $  end with number  
+
+
+// let other=mob.test("1234556787");
+
+// console.log(other);
+
+
+
+
+
+// let a=/^k/;  
+
+// let c=/k$/
+
+// let b= a.test("kellk");
+// let ab= c.test("kellk");
+
+
+// console.log(b);
+// console.log(ab);
+
+
+
+
+
+
+
+// 2nd type  constructor function
+
+
+// let a= new RegExp("hello");
+
+// let b=a.test("javahelloa");
+
+// console.log(b);
+
+
+
+
+
+
+// let c="hello";
+
+// let b=new RegExp(`${c}`);   // literal notation this type not working /${c}/
+
+// let d= b.test("xczhellocx");
+
+// console.log(d);
+
+
+
+
+
+// exec ....... check and gives location of character
+
+
+// let  a=/hello/g;
+
+// let b=a.exec("hello javascript hello");
+
+// console.log(b);
+
+//  b=a.exec("hello javascript hello");
+
+// console.log(b);
+
+
+// in case same pattern is not available it   op  is null
+
+
+
+
+
+// re.exp  types
+
+
+// let a=/[a89]/;     // [89a].. any one character available it give true
+
+// console.log(a.test("jshjdshj9"));
+
+
+
+
+
+// let  a =/[^a89]/   // ^ this simbal is using  any character not b/w the brackets (opposite 1st method)
+
+// console.log(a.test("a5"));
+
+
+
+
+// let a=/[0-9]/   //. atleast present 1 time the o/p is true   
+
+// console.log(a.test('5saef'));
+
+
+// [a-b], [A-Z],[a-Z];
+
+
+
+
+
+
+// * pattern;   ( zero or more )
+
+
+// let a=/as*/;
+
+// console.log(a.test("ljbhvbuyajj"));
+
+
+
+
+
+// + pattern   (1 or more)
+
+// let a=/as+/;
+
+// console.log(a.test("ljbhvbuyaassssssjj"));
+
+
+
+
+// ? pattern ( zero or one);
+
+// let a=/age?/;
+
+// console.log(a.test("age"));
+
+
+
+
+// {n}   exactly  n times ;
+
+// let a=/ok{3}/;
+
+// console.log(a.test("kflsokkk"));
+
+
+// {n,}  match atleast 
+
+
+
+
+
+// meta character;
+
+
+//   [ . ]  it means any character represent;
+
+//  [\d] it means digit represent;  [0-9];
+
+// [\D] it means  [0-9] - otherthen number ( at least one [a-z] chara);
+
+//  [\w] it means  [0-9 , a-z A-z , _ ] present any o/p  true
+
+// [\W]  opposite  [/w]  [ . @ # % ^ & ......];
+
+//  [\.]  it  means . represent  one character;
+
+
+// [\s] it means   space represent;
+
+
+
+
+//6. Given a String(Note:- String Will Contain all later from A-Z except 1 letter, that letter you need to find out) :-
+
+//Input string=“6 E @ f w 3 x y g N 1 o p Q A b c h i j # K l  d  m  R  T U V  Z”
+
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
