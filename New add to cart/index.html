@@ -118,7 +118,7 @@ small{
 
 let form=document.getElementsByTagName("form");
 var small=document.getElementsByTagName("small")
-let b=[];
+var b=[];
 
 form[0].addEventListener("submit",(e)=>{
 
@@ -127,19 +127,18 @@ form[0].addEventListener("submit",(e)=>{
    let username= e.target[0].value;
    let password= e.target[1].value;
    let confirmpassword= e.target[2].value;
-
-
+ 
     if(username.match(/[A-Z]{5,12}/) && password.match(/[0-9]{8,12}/) && password ==confirmpassword){
 
+        b.push({username:username, password:password, confirmpassword:confirmpassword});
 
-        b.push({username:username, password:password, confirmpassword:confirmpassword})
 
-        localStorage.setItem("register",JSON.stringify(b))
+localStorage.setItem("register",JSON.stringify(b));
 
-      window.confirm("user registered successfully complete login and happy shopping");
-    
+window.confirm("user registered successfully complete login and happy shopping");
 
-    }else if(username != username){
+
+}else if(username != username){
 
         small[0].style.display="block"
         
@@ -160,6 +159,7 @@ form[0].addEventListener("submit",(e)=>{
         
 
     }
+
 
 })
 
