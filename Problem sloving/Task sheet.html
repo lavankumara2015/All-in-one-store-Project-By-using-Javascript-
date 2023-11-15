@@ -2017,6 +2017,100 @@
 //........................Hard level problems..................... 
 
 
+// 1.Create a function that converts dash/underscore delimited words into camel casing. The first word within the output should be capitalized only if the original word was capitalized.
+
+// Examples :
+
+// toCamelCase("A-B-C") ➞ "ABC"
+
+// toCamelCase("the-stealth-warrior") ➞ "theStealthWarrior"
+
+// toCamelCase("The_Stealth_Warrior") ➞ "TheStealthWarrior"
+
+
+
+
+// function name(a) {
+//     let c=""
+//     for (let i = 0; i < a.length; i++) {
+//         if (!/[\W_]/.test(a[i])) {
+//              c+=(a[i]);
+
+           
+//         }
+//     }
+//     return  c
+// }
+// // console.log(name("A-B-C"));
+// console.log(name("the-stealth-warrior"));
+// // console.log(name("The_Stealth_Warrior"));
+
+
+
+
+
+
+
+
+
+
+
+// 2. 
+// Create a function that takes an array of strings and returns an array with only the strings that have numbers in them. If there are no strings containing numbers, return an empty array.	
+
+// Examples :
+
+// numInStr(["1a", "a", "2b", "b"]) ➞ ["1a", "2b"]
+
+// numInStr(["abc", "abc10"]) ➞ ["abc10"]
+
+// numInStr(["abc", "ab10c", "a10bc", "bcd"]) ➞ ["ab10c", "a10bc"]
+
+// numInStr(["this is a test", "test1"]) ➞ ["test1"]
+
+
+
+
+
+
+// let a=["1a", "a", "2b", "b"];
+
+// let b=a.filter( (lavan) => new RegExp("\\d").test(lavan))
+
+//     console.log(b);
+
+
+
+
+
+// function lavan(b){
+
+//     let a=[];
+
+//     for(let i=0; i<b.length;i++){
+
+//         if((b[i].match(/[0-9]/))){
+
+//             a.push(b[i]);
+//         }
+
+//     }
+// return a
+// }
+// console.log(lavan(["1a", "a", "2b", "b"]));
+// console.log(lavan(["abc", "abc10"]));
+// console.log(lavan(["abc", "ab10c", "a10bc", "bcd"]));
+// console.log(lavan(["this is a test", "test1"]));
+
+
+
+
+
+
+
+
+
+
 
 // 6. Given a String(Note:- String Will Contain all later from A-Z except 1 letter, that letter you need to find out) :-
 
@@ -2211,9 +2305,7 @@
 // console.log(b);
 
 // let firstName=b[0];
-
 // let lastName=b[2];
-
 // let id=b[7];
 
 // let lavan={firstName:firstName,lastName:lastName,id:id};
@@ -2223,52 +2315,235 @@
 
 
 
-// 2. 
-// Create a function that takes an array of strings and returns an array with only the strings that have numbers in them. If there are no strings containing numbers, return an empty array.	
+
+
+
+
+// 3. Write a function that takes a list of hours and returns the total weekly salary.
+// The input list hours is listed sequentially, ordered from Monday to Sunday.
+// A worker earns $10 an hour for the first 8 hours.
+// For every overtime hour, he earns $15.
+// On weekends, the employer pays double the usual rate, regardless how many hours were worked previously that week. For instance, 10 hours worked on a weekday would pay 80+30 = $110, but on a weekend it would pay 160+60 = $220.
 
 // Examples :
-
-// numInStr(["1a", "a", "2b", "b"]) ➞ ["1a", "2b"]
-
-// numInStr(["abc", "abc10"]) ➞ ["abc10"]
-
-// numInStr(["abc", "ab10c", "a10bc", "bcd"]) ➞ ["ab10c", "a10bc"]
-
-// numInStr(["this is a test", "test1"]) ➞ ["test1"]
+// weeklySalary([8, 8, 8, 8, 8, 0, 0]) ➞ 400
+// weeklySalary([10, 10, 10, 0, 8, 0, 0]) ➞ 410
+// weeklySalary([0, 0, 0, 0, 0, 12, 0]) ➞ 280
 
 
 
+// function lava(a,b){
+
+// for(i=0;i<a.length;i++){
+
+//    if (i <= 4) {
+
+//     b+= (a[i]<=8) ? a[i]*10 :(8*10)+(a[i]-8)*15 ;
+//    }
+//    else{
+//     b+=(a[i]*2)*10
+//    }
+// }
+// return b
+// }
+
+// console.log(lava([8, 8, 8, 8, 8, 0, 0],0));
+// console.log(lava([10, 10, 10, 0, 8, 0, 0],0));
+// console.log(lava([0, 0, 0, 0, 0, 12, 0],0));
 
 
 
-// let a=["1a", "a", "2b", "b"];
-
-// let b=a.filter( (lavan) => new RegExp("\\d").test(lavan))
-
-//     console.log(b);
 
 
 
 
 
-// function lavan(b){
+// function lava(a,b){
 
-//     let a=[];
+//     for(i=0;i<a.length;i++){
 
-//     for(let i=0; i<b.length;i++){
+//         a[i]=="8" ? b+=a[i]*10 :
 
-//         if((b[i].match(/[0-9]/))){
+//         a[i]=="10" ? b+=(8*10)+(a[i]-8)*15: 
 
-//             a.push(b[i]);
-//         }
+//         a[i]=="12" ? b+=(a[i]*2)*10 : []
+//     }
+    
+//     return b
+// }
+
+// console.log(lava([8, 8, 8, 8, 8, 0, 0],0));
+
+// console.log(lava([10, 10, 10, 8, 0, 0, 0],0));
+
+// console.log(lava([0, 0, 0, 0, 0, 12, 0],0));
+
+
+
+
+
+
+// function weeklySalary(hours) {
+//   const hourlyRate = 10;
+//   const overtimeRate = 15;
+//   let totalSalary = 0;
+
+//   for (let i = 0; i < hours.length; i++) {
+//     if (i < 5) { 
+
+//       if (hours[i] <= 8) {
+
+//         totalSalary += hours[i] * hourlyRate;
+//       } else {
+
+//         totalSalary += 8 * hourlyRate + (hours[i] - 8) * overtimeRate;
+//       }
+//     } else { 
+
+//       totalSalary += hours[i] * 2 * hourlyRate;
+//     }
+//   }
+
+//   return totalSalary;
+// }
+
+// console.log(weeklySalary([8, 8, 8, 8, 8, 0, 0])); 
+// console.log(weeklySalary([10, 10, 10, 0, 8, 0, 0])); 
+// console.log(weeklySalary([0, 0, 0, 0, 0, 12, 0])); 
+
+
+
+
+
+
+
+// let a=[1,1,1,3,3,3,2]
+// let b=[]
+// for(i=0;i<a.length; i++ ){
+    
+//     if (a[i]!==a[0]){
+//         b.push(a[i])
+//     }
+// }
+// console.log(b.length);
+
+// c=[5,5,5,5];
+// let d=[]
+// for(i=0;i<c.length; i++ ){
+    
+//     if (c[i]!==c[0]){
+//         d.push(c[i])
+//     }
+// }
+// console.log(d.length);
+
+
+
+
+// let n=7;
+
+// let arr =[1,1,1,3,3,3,2];
+
+// let count =0;
+
+// for(let i=0; i<n; i++){
+
+
+
+//     if(arr[i] !=arr[0]){
+
+//         count++;
 
 //     }
-// return a
 // }
-// console.log(lavan(["1a", "a", "2b", "b"]));
-// console.log(lavan(["abc", "abc10"]));
-// console.log(lavan(["abc", "ab10c", "a10bc", "bcd"]));
-// console.log(lavan(["this is a test", "test1"]));
+
+// console.log(count)
+
+
+
+
+
+// function helper(arr,n){
+
+// let i=0;
+
+// while(i<n-1){
+
+//     if(arr[i]=="cookie"){
+
+//         if(arr[i+1]!="milk"){
+
+//             return "no";
+//         }
+//         i++
+//     }
+//     i++
+// }
+
+// return arr[n-1]=="milk";
+// }
+
+// let arr=(["cookie","milk","milk","cookie","milk","cookie","milk"],7)
+
+// console.log(arr);
+
+
+
+
+
+// function reversePairs(input) {
+//   // Split the input string into an array of characters
+//   let characters = input.split('');
+
+//   // Loop through the array and swap adjacent characters
+//   for (let i = 0; i < characters.length - 1; i += 2) {
+//     let temp = characters[i];
+//     characters[i] = characters[i + 1];
+//     characters[i + 1] = temp;
+//   }
+
+//   // Join the array back into a string
+//   let result = characters.join('');
+
+//   return result;
+// }
+
+// // Test the function
+// let inputString = "abcdef";
+// let outputString = reversePairs(inputString);
+// console.log(outputString);  // Output: "badcfe"
+
+
+
+
+// function reversePairs(input) {
+//   let characters = input.split('');
+
+//   for (let i = 0; i < characters.length - 1; i += 2) {
+//     [characters[i], characters[i + 1]] = [characters[i + 1], characters[i]];
+//   }
+
+//   return characters.join('');
+// }
+
+// let inputString = "abcdef";
+// let outputString = reversePairs(inputString);
+// console.log(outputString); 
+
+
+
+let a="abcdef";
+
+let b=a.split('');
+
+for(i=0;i<a.length;i+=2){
+
+[b[i],b[i+1]]=[b[i+1],b[i]];
+
+
+}
+console.log(b)
+console.log(b.join(""));
 
 
 
