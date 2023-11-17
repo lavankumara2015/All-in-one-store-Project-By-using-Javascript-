@@ -1,0 +1,78 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "username": "adicherla",
+      "password": "kumar",
+      "id": 5
+    },
+    {
+      "username": "pinky",
+      "id": 6
+    },
+    {
+      "username": "ADICHERLA",
+      "password": "LAVAN",
+      "id": 7
+    },
+    {
+      "username": "LAVANUMAR",
+      "password": "NJKASD",
+      "id": 8
+    },
+    {
+      "username": "",
+      "password": "",
+      "id": 9
+    },
+    {
+      "username": "",
+      "password": "",
+      "id": 10
+    },
+    {
+      "username": "",
+      "password": "",
+      "id": 11
+    },
+    {
+      "username": "",
+      "password": "",
+      "id": 12
+    },
+    {
+      "username": "",
+      "password": "",
+      "id": 13
+    },
+    {
+      "username": "",
+      "password": "",
+      "id": 14
+    },
+    {
+      "username": "",
+      "password": "",
+      "id": 15
+    },
+    {
+      "username": "FGH",
+      "password": "FGH",
+      "id": 16
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
