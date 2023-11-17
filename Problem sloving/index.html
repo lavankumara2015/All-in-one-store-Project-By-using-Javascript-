@@ -283,6 +283,7 @@
         // problem 16th  in task sheet___________________________________
 
         // var a="a";
+
         // var b="adichaerla";
 
         // var c=""
@@ -426,10 +427,12 @@
         // var n = 5;
         // var c = 1;
         // for (i = n; i >= 1; i--) {
-        //     console.log(i);
+        
         //     c *= i
         // }
-        // console.log(c);
+
+        // let u=`5x4x3x2x1=${c}`
+        // console.log(u);
 
 
 
@@ -722,11 +725,6 @@
 
 
 
-
-
-
-
-
 //  26. Program to Check Whether a Number is Prime or Not
 
 // Input: 9
@@ -778,6 +776,275 @@
 // }
 
 // console.log(a);
+
+
+
+
+
+
+
+//................promise......................
+
+
+
+
+// let a = new Promise((resolve,reject)=>{
+
+
+//     let hello=true;
+
+//     if(hello){
+
+//         resolve("good")
+//     }else{
+
+//         reject("bad")
+//     }
+
+// })
+
+// a.then((val)=>{console.log(val);}).catch((val)=>{console.log(val);})
+
+
+
+
+
+
+// function gel(){
+
+// return  a = new Promise((resolve,reject)=>{
+
+// let a=+prompt("enter any integer");
+
+// if(a%2==0){
+
+//     resolve("even number");
+
+// }else{
+
+//     reject("odd number");
+// }
+
+// })
+
+// }
+
+// gel().then((val)=>{ console.log(val);}).catch((val)=>{console.log(val);})
+
+
+
+
+
+
+
+// function gel(){
+
+// return  a = new Promise((resolve,reject)=>{
+
+// for(i=0;i<10;i++){
+
+//     console.log(i);
+//     resolve(i)
+// }
+
+
+// reject();
+    
+// });
+
+// }
+
+// gel().then((val)=>{ console.log("1 to 10 print ");}).catch((val)=>{console.log("error");})
+
+
+
+
+
+
+//....................fetch............................
+
+
+
+
+// fetch("http://fakestoreapi.com/products").then((data)=>{
+
+//     // console.log(data.json());
+
+//     return data.json()
+
+// }).then((dataa)=>{
+
+//     console.log(dataa);
+// })
+
+
+
+
+
+
+//...........................prime numbers print.....................
+
+
+
+
+// for(let i=2; i<=100; i++){
+
+//     let b=true;
+
+//     for(let j=2; j< i ; j++){
+
+//         if(i % j == 0){
+
+//             b=false;
+//             break
+//         }
+//     }
+
+//     if(b){
+//         console.log(i);
+//     }
+
+// }
+
+
+
+
+
+
+//...................support class Q.................................
+
+
+
+//............. 1. factorial number.................
+
+
+// var n = 5;
+//         var c = 1;
+//         for (i = n; i >= 1; i--) {
+        
+//             c *= i
+//         }
+//         console.log(`5x4x3x2x1=${c}`);
+
+
+
+// ............. 2. palindrome....................
+
+
+
+// let a =prompt("enter any string");
+
+// let b="";
+
+// for(i=a.length-1; i>=0; i--){
+
+//     b+=a[i];
+
+// }if(a==b){
+
+// alert("it palindrome")
+// }else{
+//     alert("it is not a palindrome")
+// }
+
+
+
+//.................. prime numbers print.............
+
+
+// let a=+prompt("enter only integers")
+
+// for(i=2; i<a ; i++){
+
+//     let b= true;
+
+//     for(j=2; j<i; j++){
+
+//         if(i%j==0){
+
+//             b=false;
+//             break
+//         }
+//     }
+//     if(b){
+
+// console.log(i);
+// }
+// }
+
+
+
+
+
+
+//.................... patten printing.....................
+
+
+
+
+// let b="";
+
+// for(i=0;i<=6;i++){
+
+//     for(j=1;j<i;j++){
+
+//         b+="*"
+//     }
+//     b+="\n"
+    
+// }
+// console.log(b);
+
+
+
+
+
+// let c="";
+
+// for(i=6;i>0;i--){
+
+//     for(j=1;j<i;j++){
+
+//         c+="*"
+//     }
+
+//     c+="\n"
+// }
+// console.log(c);
+
+
+
+
+
+
+
+
+
+// let str="babad"
+// //let str="cbbd"
+// const arr=[]
+// for(i=0;i<str.length;i++){
+//   for(j=i+1;j<=str.length;j++){
+//     arr.push(str.substring(i,j))
+//   }
+// }
+// let res=[]
+// for(let x=0;x<arr.length;x++){
+//   let rev=""
+//   for(let y=arr[x].length-1;y>=0;y--){
+//     rev+=arr[x][y]
+//   }
+//   if(arr[x]===rev && arr[x].length>1){
+//     res.push(arr[x])
+//   }
+// }
+// let result=res.sort((a,b)=>{
+//   return a-b
+// })
+// console.log(result[result.length-1]);
+// console.log(res);
+// console.log(arr);
+
 
 
 
