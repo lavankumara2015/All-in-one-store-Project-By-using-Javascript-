@@ -470,14 +470,15 @@
 //                 if(a[i]==a[j]){
 
 //                     b++
+                    
 //                 }
 //             }
+                
 // if(b==1){
 
 // console.log(a[i]);
 // }
-
-//         }
+// }
         
 
 
@@ -942,15 +943,14 @@
 //         let a=15;
 //         let b=50;
 // let c;
-//     a>b ? c=a : c=b;
+//     // a>b ? c=a : c=b;
 
-//     // if(a>b){
-//     //     c=a
-//     // }else{
-//     //     c=b
-//     // }
-
-//     let d=1;
+//     if(a>b){
+//         c=a
+//     }else{
+//         c=b
+//     }
+//     let d=c;
 
 //     while(c!=0){
 
@@ -961,9 +961,6 @@
 //         }
 //         d++;
 //     }
-
-
-
 
 
 
@@ -1720,6 +1717,26 @@
 
 
 
+// let a="Hiiiamram";
+
+// let b=[]
+
+// for(i=0;i<a.length;i++){
+//     for(j=i+1;j<a.length;j++){
+//         if(a[i]==a[j]){
+// b.push(a[i])
+           
+//         }
+//     }
+// }
+// let bb=new Set(b)
+// console.log(bb);
+
+
+
+
+
+
 
 // 9.Write Program to remove duplicate elements in an array and sort it in descending order(can not use predefined function).
 
@@ -2314,7 +2331,7 @@
 // }
 // console.log(a);
 
-// let b=0;
+// let b=1;
 
 // let c=1;
 
@@ -2493,6 +2510,7 @@
 
 
 
+
 // let a=[1,1,1,3,3,3,2]
 // let b=[]
 // for(i=0;i<a.length; i++ ){
@@ -2523,8 +2541,6 @@
 // let count =0;
 
 // for(let i=0; i<n; i++){
-
-
 
 //     if(arr[i] !=arr[0]){
 
@@ -2693,22 +2709,17 @@
 
 // let a="abc";
 
-// let b="abcdef";
+// let b="abcdefa";
 
 // let d="";
 
 // for(i=0;i<a.length;i++){
-
-
 //     for(j=0;j<b.length;j++){
 
 //         if(a[i]===b[j]){
 
 //             d+=a[i]
-
-            
 //         }
-        
 //     }
 
 // }
@@ -2720,8 +2731,410 @@
 
 
 
+//............reverse printing.....................
 
 
+
+// let a= [1,2,3,4];
+
+// for(i=0;i<a.length;i++){
+//     for(j=i+1;j<a.length;j++){
+
+//         if(a[i]<a[j]){
+
+//             [a[i],a[j]]=[a[j],a[i]]
+//         }
+//     }
+// }
+// console.log(a);
+
+
+
+
+
+//................smallest missing number.............
+
+
+
+// a=0;
+
+// let b=[1,3,2,4,7];
+
+// b.sort();
+
+// for(i=0; i<b.length;i++){
+
+//     if(b[i] !=i+1){
+
+//         a=i+1;
+    
+//     }
+// }
+// console.log(a);
+
+
+
+
+
+//....................... liner search algorithm.................
+
+
+// let a=[1,2,3,54,75,32];
+
+// let b=5;
+
+// let c=-1;
+
+// for(let i=0;i<a.length;i++){
+
+//     if(a[i]==b){
+
+//         c=i;
+//         break
+//     }
+// }
+// console.log(c);
+
+
+
+
+
+// function search(arr, key) {
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] === key) {
+//             return i;
+//         }
+//     }
+//     return -1; 
+// }
+
+// console.log(search([1, 2, 4, 7, 9], 6));
+
+
+
+
+
+
+
+//.............. duplicate values (print )..................
+
+
+
+
+// let a=[1,2,2,2,3,3,4,5,5,5,6,6,7,8,9];
+
+// let c=[];
+
+// for(i=0;i<a.length;i++){
+
+//     if(a[i]==a[i+1]){
+
+//         c.push(a[i])
+//     }
+// }
+// let d=new Set(c);
+// console.log(d);
+// console.log(d.size);
+
+
+
+
+// let a=[1,2,2,2,3,3,4,5,5,6];
+// let b=[];    
+
+// for(i=0;i<a.length;i++){
+//     for(j=i+1;j<a.length;j++){
+//         if(a[i]==a[j]){
+// b.push(a[i])
+           
+//         }
+//     }
+// }
+// let bb=new Set(b)
+// console.log(bb);
+
+
+
+
+
+
+
+
+//................with out using pre defined method even add array.....................
+
+
+
+// let a=[0,1,2,3,4,5,6,7,8,9,10];
+
+// let b="";
+
+// let c="";
+
+// for(i=0;i<a.length;i++){
+
+//     if(a[i]%2==0){
+
+//         b+=a[i]
+
+//     }else{
+
+//        c+=a[i]
+//     }
+
+// }
+
+// console.log(b);
+// console.log(c);
+
+
+
+
+
+
+// let a = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// let b = [];
+
+// for (let i = 0, j = 0; i < a.length; i++) {
+//   if (a[i] % 2 === 0) {
+//     b[j] = a[i];
+//     j++;
+//   }
+// }
+
+// console.log(b);
+                                     
+
+
+
+
+
+
+// let a = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// let b = [];
+
+// for(i=0;i<a.length;i++){
+
+//     if(a[i]%2==0){
+
+//         b[b.length]=a[i]
+//     }
+// }
+
+// console.log(b);
+
+
+
+
+
+
+
+
+
+// let a=[0,1,2,3,4,5,6,7,8,9,10];
+// console.log(b=a.filter( val=> val%2==0 ));
+
+
+
+
+
+
+
+// let a=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9,10];
+
+// let b=[];
+
+// for(i=0;i<a.length;i++){
+
+//      a[i]==0 ? b.push("zero") : 
+//      a[i]==1 ? b.push("one") : 
+//      a[i]==2 ? b.push("two") : 
+//      a[i]==3 ? b.push("three" ): 
+//      a[i]==4 ? b.push("four") : 
+//      a[i]==5 ? b.push("five") : 
+//      a[i]==6 ?b.push( "six") : 
+//      a[i]==7 ? b.push('seven' ): 
+//      a[i]==8 ? b.push("eighth") : 
+//      a[i]==9 ? b.push("nine") : 
+//      a[i]==10 ? b.push("ten") : [];
+    
+// }
+// console.log(b);
+
+
+
+
+
+// let a=[1,2,4,6,7,8,10,12,14,15];
+
+// let b=[];
+
+// let c=1;
+
+// for(i=1;i<a.length+c;i++){
+
+//     if(a.indexOf(i)==-1){
+
+//         b.push(i)
+//        c++
+//     }else{
+//         b.push(i)
+//     }
+// }
+
+// console.log(b);
+
+
+
+
+
+
+
+
+//.................... array falling  Greatest or pick  value...........
+
+
+// let a=[1,2,3,4,5,6,5,4,3,2,1];
+
+// let c=0
+
+// for(i=0;i<a.length-1;i++){
+
+//     if(a[i]>a[i+1] && a[i]>a[i-1]){
+
+//         // c=a[i]
+
+//         console.log(a[i]);
+        
+//     }
+// }
+// console.log(c);
+
+
+
+
+//.............. array sort......................
+
+
+
+// let  a=[1,2,3,4,5,6];
+
+// let j=a.length-1;
+
+// let i=0;
+
+// while(i<j){
+
+//     [a[i],a[j]]=[a[j],a[i]]
+//     j--
+//     i++
+
+// }
+
+// console.log(a);
+
+
+
+
+
+// for(i=0;i<a.length/2;i++){
+// [a[i],a[a.length-1-i]]=[a[a.length-1-i],a[i]]
+// }
+
+
+
+
+
+//.............duplicate values count and edge case duplicate values check........................
+
+
+
+// let a=[1,2,2,2,3,3,4,4,4,4,5,6,6,7,7];
+// let i=0;
+// let count=0;
+// let j=i+1;
+// while (j<a.length){
+//     if(a[i]!=a[j]){
+//         if(j!=i+1){
+//             count++
+//         }
+//         i=j
+//     }
+//     j++
+// }
+// if(j!=i+1) count++
+// console.log(count);
+
+
+
+
+
+// let a=[1,1,2,3,4,5,6,7,8,8];
+
+// let i=0;
+// let count=0;
+// let j=i+1;
+
+// while(j<a.length){
+
+// if(a[i]!=a[j]){
+
+//     if(j!=i+1){
+//         count++
+//     }
+//     i=j
+// }
+// j++
+// }
+// if(j!=i+1) count++ 
+
+// console.log(count);
+
+
+
+
+
+// let b=[]
+// for(i=0;i<a.length;i++){
+
+//     if(a[i]==a[i+1]){
+
+//         b.push(a[i])
+//     }
+// }
+// console.log(new Set(b).size);
+
+
+
+
+
+//...................string two characters  checking total 
+
+
+
+
+// function hello(a){
+
+// if(a.length%2 !=0)  return "unlucky";
+
+// let b=a[0];
+// let c=a[1];
+
+// if(b==c) return "unlucky";
+
+// for(i=0;i<a.length;i++){
+
+//     if(i%2==0 && a[i]!=b) return "unlucky"
+
+//     else if (i%2 !=0 && a[i]!=c) return "unlucky"
+// }
+
+// return "Lucky"
+
+// }
+
+// let b=hello("ABAB");
+
+// console.log(b);
 
 
 
