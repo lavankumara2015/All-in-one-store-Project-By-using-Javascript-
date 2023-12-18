@@ -4300,6 +4300,218 @@
 
 
 
+
+
+
+        //...................string consists...............
+
+//         let allowed = "cad";
+// let words = ["a", "b", "c", "ab", "ac", "bc", "abc"];
+// let count = 0;
+
+// for (let i = 0; i < words.length; i++) {
+//     let b = true; 
+
+//     for (let j = 0; j < words[i].length; j++) {
+//         if (!allowed.includes(words[i][j])) {
+//             b = false;   
+//         }
+//     }
+
+//     if (b) {
+//         count++;
+//     }
+// }
+
+// console.log(count);
+
+
+
+
+
+
+
+// const fruits = [
+//      {apple:2, orange:3, grape:2},
+//      {apple:3, orange:4, grape:5},
+//      {apple:4, orange:5, grape:6},
+//      ];
+
+//      let a=0;
+//      for(let i=0; i<fruits.length; i++){
+
+//         a+=fruits[i].apple
+
+//      }
+
+
+
+// console.log(a);
+
+
+
+// function destCity(paths) {
+//     let a = [];
+//     let b = [];
+
+//     for (let i = 0; i < paths.length; i++) {
+//         a.push(paths[i][0]);
+//         b.push(paths[i][1]);
+
+//         console.log(a);
+//         console.log(b);
+//     }
+//     for (let j= 0; j<b.length; j++) {
+//         const c = b[j];
+//         if (a.indexOf(c) === -1) {
+//             return c;
+//         }
+//     }
+// }
+
+// let g = [["London", "New York"], ["New York", "Lima"], ["Lima", "Sao Paulo"]];
+// //console.log(destCity(g)); 
+
+// let o = [["B", "C"], ["D", "B"], ["C", "A"]];
+// //console.log(destCity(o)); 
+
+// let v = [["A", "Z"]];
+// //console.log(destCity(v)); 
+
+// let m = [["pYyNGfBYbm","wxAscRuzOl"],["kzwEQHfwce","pYyNGfBYbm"]];
+// //console.log(destCity(m));
+
+
+
+
+
+
+//......................touppercase using charcodeat..........
+
+//   let a="IamHappy";
+
+//   let c="";
+
+//   for(i in a){
+
+//     if(a.charCodeAt(i)>=65 && a.charCodeAt(i) <= 90){
+
+//         c+=a[i].toLowerCase()
+//     }else{
+//         c+=a[i].toUpperCase()
+//     }
+//   }
+
+//   console.log(c);
+
+
+
+
+
+
+// let a="IaMhApPy";
+
+// let b="";
+
+// for(let i=0; i<a.length; i++){
+
+//     if(i%2<1){
+
+//         b+=a[i].toLowerCase()
+
+//     }else{
+//         b+=a[i].toUpperCase()
+//     }
+// }
+
+// console.log(b);
+
+
+
+
+
+
+
+
+
+
+
+// let a=[[1,2,3],[3,1,2]];
+
+// let b=[]
+
+// for(let i=0; i<a.length; i++ ){
+
+//     for(let j=a[i].length-1; j>=0; j--){
+
+//         b.push(a[i][j])
+//     }
+// }
+// console.log(b);
+
+
+
+
+//............................nested while loop............
+
+
+// let a=[[1,2,3],[3,1,2]];
+// let b=[];
+// let i=0;
+// while (i<a.length) {
+//     let j=a[i].length-1
+//    while (j>=0) {
+//     b.push(a[i][j])
+//    j--
+//    }  
+//     i++
+// }
+// console.log(b);
+
+
+
+
+
+//.......................array of array.......with out using flat............
+
+// let a=[[1,2,3],[3,1,2,[1,[1],[1,[1,[9,[80]]]]],[1]], [[3,5,2],1,[3,5,7]]];
+
+
+// // console.log(a.flat(3));
+
+// let b=[];
+
+// for(i of a){
+
+//     for(j of i){
+
+//         if(j.length>0){
+//             hello(j)
+            
+//         }else{
+
+//            b.push(j)
+//         }  
+//     }
+// }
+// function hello(j) {
+    
+//     for(i of j){
+//         if(i.length>0){
+//             hello(i)
+//         }
+//         else{
+//             b.push(i)
+//         } 
+//     }
+// }
+// console.log(b);
+
+
+
+
+
+
     </script>
 </body>
 
