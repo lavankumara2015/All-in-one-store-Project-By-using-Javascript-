@@ -123,7 +123,6 @@ small{
 
 let form=document.getElementsByTagName("form");
 var small=document.getElementsByTagName("small")
-// var b=[];
 
 form[0].addEventListener("submit",(e)=>{
 
@@ -146,17 +145,11 @@ return l.username===username ;
 
 })
 if(dup){
-   
-
 alert("username already exist")
 return
 
 }
 
-
-
-
- 
     if(username.match(/[A-Z]{5,12}/) && password.match(/[0-9]{8,12}/) && password ==confirmpassword){
         
         user.push(c);
